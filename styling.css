@@ -1,0 +1,33 @@
+.jumbotron {
+  background-color: #FFA347;
+}
+
+#header {
+  text-align: center;
+  color: white;
+}
+
+
+
+#about {
+  text-align: center;
+}
+
+
+#experience {
+  text-align: center;
+}
+
+
+#education {
+  text-align: center;
+}
+
+
+#connect {
+  text-align: center;
+}
+#connect-icon {
+  color: black;
+  font-size: 35px;
+}
