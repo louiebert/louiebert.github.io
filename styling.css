@@ -2,11 +2,19 @@
   background-color: #FFA347;
 }
 
-#header {
+.jumbotron .name {
   text-align: center;
   color: white;
 }
 
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 70%;
+  background-color:#000000;
+  height: 1px;
+}
 
 
 #about {
@@ -27,7 +35,36 @@
 #connect {
   text-align: center;
 }
-#connect-icon {
+.connect-sub {
+  margin-bottom: 10px;
+}
+i {
+  width: 60px;
+  height: 60px;
   color: black;
-  font-size: 35px;
+  border: solid black 2px;
+  border-radius: 60px;
+  margin-bottom: 10px;
+}
+i:hover {
+  color: orange;
+  border: solid orange 2px;
+}
+i.linkedin {
+  padding-top: 7px;
+}
+i.twitter {
+  padding-top: 7px;
+}
+i.github {
+  padding-top: 7px;
+}
+i.facebook {
+  padding-top: 7px;
+}
+i.email {
+  padding-top: 6px;
+}
+i.phone {
+  padding-top: 7px;
 }
