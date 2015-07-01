@@ -11,17 +11,17 @@ hr {
   height: 1px;
 }
 
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 760px) {
   .jumbotron {
     background-image: url("images/billboard-sm.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     padding-top: 30%;
     padding-bottom: 30%;
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 761px) {
   .jumbotron {
     background-image: url("images/billboard-lg.jpg");
     background-size: cover;
