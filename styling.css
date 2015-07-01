@@ -26,9 +26,9 @@ hr {
     background-image: url("images/billboard-lg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
-    padding-top: 30%;
-    padding-bottom: 30%;
+    background-position: center;
+    padding-top: 20%;
+    padding-bottom: 20%;
   }
 }
 
