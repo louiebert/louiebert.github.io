@@ -11,9 +11,30 @@ hr {
   height: 1px;
 }
 
-.jumbotron {
-  background-color: #FFA347;
+@media screen and (max-width: 620px) {
+  .jumbotron {
+    background-image: url("images/billboard-sm.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    padding: 30% 0 30% 0;
+  }
 }
+@media screen and (min-width: 621px) {
+  .jumbotron {
+    background-image: url("images/billboard-lg.jpg");
+  }
+}
+
+/*.jumbotron {
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  padding: 20% 0 20% 0;
+}*/
 
 .jumbotron .name {
   text-align: center;
