@@ -27,23 +27,18 @@ hr {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 15%;
+    padding-bottom: 25%;
   }
 }
 
-/*.jumbotron {
-  background-position: top;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: black;
-  padding: 20% 0 20% 0;
-}*/
-
 .jumbotron .name {
-  text-align: center;
   color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 80px;
+  font-weight: 100;
+  text-shadow: 2px 2px #000000;
+  text-align: center;
 }
 
 
