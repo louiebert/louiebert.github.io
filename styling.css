@@ -11,34 +11,34 @@ hr {
   height: 1px;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 760px) {
   .jumbotron {
     background-image: url("images/billboard-sm.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: top;
-    padding: 30% 0 30% 0;
+    padding-top: 40%;
+    padding-bottom: 50%;
   }
 }
-@media screen and (min-width: 621px) {
+@media screen and (min-width: 761px) {
   .jumbotron {
     background-image: url("images/billboard-lg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 15%;
+    padding-bottom: 25%;
   }
 }
 
-/*.jumbotron {
-  background-position: top;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: black;
-  padding: 20% 0 20% 0;
-}*/
-
 .jumbotron .name {
-  text-align: center;
   color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 80px;
+  font-weight: 100;
+  text-shadow: 2px 2px #000000;
+  text-align: center;
 }
 
 
