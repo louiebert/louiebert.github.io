@@ -17,7 +17,8 @@ hr {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
-    padding: 30% 0 30% 0;
+    padding-top: 30%;
+    padding-bottom: 30%;
   }
 }
 @media screen and (min-width: 201px) {
@@ -26,7 +27,8 @@ hr {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
-    padding: 30% 0 30% 0;
+    padding-top: 30%;
+    padding-bottom: 30%;
   }
 }
 
