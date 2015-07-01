@@ -23,6 +23,10 @@ hr {
 @media screen and (min-width: 201px) {
   .jumbotron {
     background-image: url("images/billboard-lg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 30% 0 30% 0;
   }
 }
 
