@@ -54,21 +54,21 @@ i:hover {
   color: orange;
   border: solid orange 2px;
 }
-i.linkedin {
+i.github {
   padding-top: 7px;
 }
 i.twitter {
   padding-top: 7px;
 }
-i.github {
+i.stack-overflow {
+  padding-top: 6px;
+}
+i.linkedin {
+  padding-top: 7px;
+}
+i.google-plus {
   padding-top: 7px;
 }
 i.facebook {
-  padding-top: 7px;
-}
-i.email {
-  padding-top: 6px;
-}
-i.phone {
   padding-top: 7px;
 }
