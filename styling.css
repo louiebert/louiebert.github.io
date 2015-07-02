@@ -1,16 +1,21 @@
 body {
-  /*padding-top: 50px;*/
+  padding-top: 50px;
 }
 
 .navbar {
-  background-color: rgba(2, 46, 92, 0.9);
+  background-color: #1F3044;
+  border-width: 0;
   border-color: none;
 }
 .nav.navbar-nav.navbar-right li a {
-    color: white;
+  color: white;
 }
 #navbar-home {
-    color: white;
+  color: white;
+}
+button #button-nav {
+  color: green;
+  background-color: green;
 }
 
 hr {
