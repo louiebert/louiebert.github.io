@@ -1,5 +1,16 @@
 body {
-  padding-top: 50px;
+  /*padding-top: 50px;*/
+}
+
+.navbar {
+  background-color: rgba(2, 46, 92, 0.9);
+  border-color: none;
+}
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+}
+#navbar-home {
+    color: white;
 }
 
 hr {
@@ -11,34 +22,37 @@ hr {
   height: 1px;
 }
 
-@media screen and (max-width: 760px) {
+.jumbotron .name {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-weight: 100;
+  text-shadow: 2px 2px #000000;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
   .jumbotron {
     background-image: url("images/billboard-sm.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: top;
-    padding-top: 40%;
+    padding-top: 25%;
     padding-bottom: 50%;
   }
+  .jumbotron .name {
+    font-size: 10vw;
+  }
 }
-@media screen and (min-width: 761px) {
+@media screen and (min-width: 768px) {
   .jumbotron {
     background-image: url("images/billboard-lg.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     padding-top: 15%;
     padding-bottom: 25%;
   }
-}
-
-.jumbotron .name {
-  color: white;
-  font-family: "Oswald", sans-serif;
-  font-size: 80px;
-  font-weight: 100;
-  text-shadow: 2px 2px #000000;
-  text-align: center;
+  .jumbotron .name {
+    font-size: 98px;
+  }
 }
 
 
@@ -72,8 +86,8 @@ i {
   margin-bottom: 10px;
 }
 i:hover {
-  color: orange;
-  border: solid orange 2px;
+  color: #093d95;
+  border: solid #093d95 2px;
 }
 i.github {
   padding-top: 7px;
