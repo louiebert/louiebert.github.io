@@ -24,31 +24,11 @@
           ga('create', 'UA-64607508-1', 'auto');
           ga('send', 'pageview');
         </script>
-        <script>
-        $(function() {
-          $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html,body').animate({
-                  scrollTop: target.offset().top - 50
-                }, 750);
-                return false;
-              }
-            }
-          });
-        });
-        $(document).ready(function () {
-          $(".navbar-nav li a").click(function(event) {
-            $(".navbar-collapse").collapse('hide');
-          });
-        });
-        </script>
+        <script src="animations.js"></script>
     </head>
 
     <body>
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <!-- <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header ">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id="button-nav">
@@ -67,10 +47,22 @@
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> -->
+      <div class="cbp-af-header" id="header">
+        <div class="cbp-af-inner">
+          <!--Fixed</h1>-->
+          <a class="logo" href="" id="navbar-home">Louie</a>
+          <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#connect">Connect</a>
+          </nav>
+        </div>
+      </div>
 
       <div class="jumbotron">
-        <h1 class="name animated zoomInDown">Louie Bertoncin</h1>
+        <h1 class="name animated zoomInDown" id="titleName">Louie Bertoncin</h1>
       </div>
 
       <section id="about">
@@ -78,7 +70,7 @@
           <div class="row">
             <h2>About Louie</h2>
           </div>
-          <div class="row col-xs-offset-1 col-xs-10">
+          <div class="row col-xs-offset-1 col-sm-offset-2 col-xs-10 col-sm-8">
             <p>
               My name is Louie Bertoncin, and I am a sophomore majoring in Computer Science at the Missouri University of Science and Technology in Rolla, MO. I love developing for the mobile platform and making new friends. Some of my hobbies include playing Ultimate, running, and coding. I'm normally involved in some sort of programming project, likely throwing myself into something I've never tried before. I live life in search of new challenges in order to improve myself and keep boredom at bay.
             </p>
@@ -91,7 +83,7 @@
           <div class="row">
             <h2>Experience</h2>
           </div>
-          <div class="row col-xs-offset-1 col-xs-10">
+          <div class="row col-xs-offset-1 col-sm-offset-2 col-xs-10 col-sm-8">
             <p>
               Here is where I talk about my previous developing experience including FRC Scout, my two years at Cerner, some work with ChapterBuilder, and JRL (a Junior Robotics League for elementary and middle school kids).
             </p>
@@ -104,7 +96,7 @@
           <div class="row">
             <h2>Education</h2>
           </div>
-          <div class="row col-xs-offset-1 col-xs-10">
+          <div class="row col-xs-offset-1 col-sm-offset-2 col-xs-10 col-sm-8">
             <p>
               At this location of the page, I'll tell a bit about how I first started learning how to program through FIRST robotics while attending Lee's Summit High School. My senior year there, I participated in Cerner's school work program for two hours of every school day. I then moved on to the Missouri University of Science and Technology to major in Computer Science, where I can claim my current education status is. I am a sophomore at S&T (in case you didn't catch that from the top).
             </p>
@@ -125,7 +117,7 @@
           <hr>
 
           <!-- Social Profiles Links -->
-          <div class="row col-xs-8 col-xs-offset-2">
+          <div class="col-sm-offset-2 col-sm-8">
             <ul class="list-inline">
               <li>
                 <a href="https://github.com/louman347">
