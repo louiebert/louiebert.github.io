@@ -1,21 +1,6 @@
-body {
-  /*padding-top: 50px;*/
+a:hover, a:link {
+  text-decoration: none;
 }
-
-/*.navbar {
-  background-color: #1F3044;
-  border-width: 0;
-  border-color: none;
-}
-.nav.navbar-nav.navbar-right li a {
-  color: white;
-}
-#navbar-home {
-  color: white;
-}*/
-
-/* ADDING IN SOME SPACE BETWEEN NEW AND OLD CODE */
-
 
 .cbp-af-header {
   position: fixed;
@@ -71,8 +56,9 @@ body {
   font-size: 1.4em;
 }
 
+.cbp-af-header .logo:hover,
 .cbp-af-header nav a:hover {
-  color: #333;
+  color: #e0dede;
 }
 
 /* Transitions and class for reduced height */
@@ -94,7 +80,9 @@ body {
 }
 
 .cbp-af-header.cbp-af-header-shrink .logo {
+  color: #c8c8c8;
   font-size: 2em;
+  font-weight: 500;
 }
 
 /* Example Media Queries */
