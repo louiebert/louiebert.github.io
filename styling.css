@@ -9,7 +9,7 @@ a:hover, a:link {
   width: 100%;
   background: none;
   z-index: 10000;
-  height: 130px;
+  height: 120px;
   overflow: hidden;
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
@@ -30,19 +30,15 @@ a:hover, a:link {
 
 .cbp-af-header .logo,
 .cbp-af-header nav a {
-  line-height: 130px;
+  line-height: 120px;
 }
 
 .cbp-af-header .logo {
   color: #aaa;
-  letter-spacing: 4px;
-  font-size: 4em;
+  letter-spacing: 3px;
+  font-size: 3.5em;
   margin: 0;
   float: left;
-}
-.cbp-af-header .logo > img {
-  max-width:100%;
-  max-height: 100%;
 }
 
 .cbp-af-header nav {
@@ -81,11 +77,24 @@ a:hover, a:link {
 
 .cbp-af-header.cbp-af-header-shrink .logo {
   color: #c8c8c8;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: 500;
 }
 
-/* Example Media Queries */
+.jumbotron {
+  background-image: url("images/billboard-lg.jpg");
+  background-size: cover;
+  background-position: center;
+  letter-spacing: 4px;
+  padding-top: 15%;
+  padding-bottom: 25%;
+  height: 100vh;
+}
+.jumbotron .name {
+  font-size: 98px;
+  padding-top: 10vh;
+}
+
 @media screen and (max-width: 767px) {
   .cbp-af-header .cbp-af-inner {
     width: 100%;
@@ -118,12 +127,23 @@ a:hover, a:link {
 
   .cbp-af-header.cbp-af-header-shrink .logo {
     display: block;
-    font-size: 3em;
-    height: 50px;
+    font-size: 3.25em;
+    line-height: 65px;
     float: none;
   }
   .cbp-af-header.cbp-af-header-shrink nav a {
     font-size: 3vw;
+    line-height: 35px;
+  }
+  .jumbotron {
+    background-image: url("images/billboard-sm.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 60vh;
+    letter-spacing: 1px;
+  }
+  .jumbotron .name {
+    font-size: 14vw;
   }
 }
 
@@ -146,6 +166,16 @@ a:hover, a:link {
     font-size: 1.2em;
     margin: 0 0 0 10px;
   }
+  .jumbotron {
+    background-image: url("images/billboard-sm.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+  }
+  .jumbotron .name {
+    font-size: 9vw;
+    padding-top: 20vh;
+  }
 }
 
 
@@ -164,32 +194,6 @@ hr {
   font-weight: 100;
   text-shadow: 2px 2px #000000;
   text-align: center;
-}
-
-@media screen and (max-width: 767px) {
-  .jumbotron {
-    background-image: url("images/billboard-sm.jpg");
-    background-size: cover;
-    background-position: top;
-    padding-top: 25%;
-    padding-bottom: 50%;
-  }
-  .jumbotron .name {
-    font-size: 10vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .jumbotron {
-    background-image: url("images/billboard-lg.jpg");
-    background-size: cover;
-    background-position: center;
-    letter-spacing: 4px;
-    padding-top: 15%;
-    padding-bottom: 25%;
-  }
-  .jumbotron .name {
-    font-size: 98px;
-  }
 }
 
 
