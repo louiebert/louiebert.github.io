@@ -206,6 +206,13 @@ hr {
   text-align: center;
 }
 
+#experience ul {
+  text-align: left;
+}
+#experience li {
+  margin-top: 1em;
+}
+
 
 #education {
   text-align: center;
@@ -219,6 +226,7 @@ hr {
   margin-bottom: 10px;
 }
 i {
+  text-align: center;
   width: 60px;
   height: 60px;
   color: black;
