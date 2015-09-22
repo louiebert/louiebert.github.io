@@ -4,17 +4,16 @@ var smoothScrolling = $(function() {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
+        var spacing = 70;
+        if (window.innerWidth < 768) {
+          spacing = 100;
+        }
         $('html,body').animate({
-          scrollTop: target.offset().top - $(".cbp-af-header").height()
+          scrollTop: target.offset().top - spacing
         }, 750);
         return false;
       }
     }
-  });
-});
-var hideDropdown = $(document).ready(function () {
-  $(".navbar-nav li a").click(function(event) {
-    $(".navbar-collapse").collapse('hide');
   });
 });
 var cbpAnimatedHeader = (function() {
@@ -25,7 +24,7 @@ var cbpAnimatedHeader = (function() {
 
     function init() {
         window.addEventListener( 'scroll', function( event ) {
-            if( !didScroll ) {
+            if(!didScroll) {
                 didScroll = true;
                 setTimeout( scrollPage, 50 );
             }
@@ -37,8 +36,7 @@ var cbpAnimatedHeader = (function() {
         var sy = scrollY();
         if ( sy >= changeHeaderOn ) {
           document.getElementById("header").className = "cbp-af-header cbp-af-header-shrink";
-        }
-        else {
+        } else {
           document.getElementById("header").className = "cbp-af-header";
         }
         didScroll = false;
