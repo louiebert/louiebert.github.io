@@ -4,6 +4,18 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+div.container {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 a:hover, a:link {
   text-decoration: none;
 }
@@ -201,19 +213,6 @@ hr {
   text-align: center;
 }
 
-
-section {
-  display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
-div.container {
-  width: 100%;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 .transition { transition: .3s cubic-bezier(.3, 0, 0, 1.3) }
 .card {
   background-color: #fff;
@@ -241,18 +240,29 @@ div.container {
   display: inline;
 }
 .card:hover .cta-container.chapterbuilder {
-  margin-top: 277px;
+  margin-top: 265px;
 }
 .card:hover .cta-container.jrl {
   margin-top: 285px;
 }
 .card:hover .card_circle {
-  background-size: cover;
   border-radius: 0;
   margin-top: -230px;
 }
+.card:hover .card_circle.frc_scout {
+  margin-top: -90px;
+}
+.card:hover .card_circle.cerner {
+  margin-top: 14px;
+}
+.card:hover .card_circle.chapterbuilder {
+  margin-top: 28px;
+}
+.card:hover .card_circle.jrl {
+  margin-top: -90px;
+}
 .card:hover h2 {
-  background: #3487f7;
+  background: #23324B;
   color: #fff;
   margin-top: 100px;
   padding: 5px;
@@ -264,15 +274,19 @@ div.container {
 }
 .card:hover p.long.frc_scout {
   display: inherit;
-  margin-top: 168px;
+  margin-top: 160px;
 }
 .card:hover p.long.cerner {
   display: inherit;
-  margin-top: 176px;
+  margin-top: 155px;
 }
 .card:hover p.long.chapterbuilder {
   display: inherit;
-  margin-top: 176px;
+  margin-top: 157px;
+}
+.card:hover p.long.jrl {
+  display: inherit;
+  margin-top: 165px;
 }
 .card:hover p.short {
   display: none;
@@ -288,8 +302,44 @@ div.container {
   position: relative;
   width: 180%;
 }
+.card_circle.frc_scout {
+  background: url('images/ICON_TD_Rounded.png') no-repeat center bottom;
+  background-size: cover;
+  margin-left: -10px;
+  margin-top: -120px;
+  height: 250px;
+  width: 300px;
+  border-radius: 50%;
+}
+.card_circle.cerner {
+  background: url('images/cerner.png') no-repeat center bottom;
+  background-size: cover;
+  margin-left: 18px;
+  margin-top: 20px;
+  height: 70px;
+  width: 250px;
+  border-radius: 0px;
+}
+.card_circle.chapterbuilder {
+  background: url('images/chapterbuilder.png') no-repeat center bottom;
+  background-size: cover;
+  margin-left: 18px;
+  margin-top: 37px;
+  height: 50px;
+  width: 250px;
+  border-radius: 0px;
+}
+.card_circle.jrl {
+  background: url('images/JRL.png') no-repeat center bottom;
+  background-size: cover;
+  margin-left: -10px;
+  margin-top: -120px;
+  height: 250px;
+  width: 300px;
+  border-radius: 50%;
+}
 h2.cardh2 {
-  color: #791272;
+  color: #000000;
   font-size: 18pt;
   font-weight: 200;
   margin-top: 150px;
@@ -306,7 +356,7 @@ p.cardp {
   position: absolute;
   text-align: center;
   z-index: 9999;
-  padding: 5px;
+  padding: 7px;
 }
 p.cardp.long {
   display: none;
@@ -332,9 +382,9 @@ p.cardp.long {
   -webkit-border-radius: 2px;
   -webkit-transition: 0.2s ease-out;
   background-clip: padding-box;
-  border: 2px solid #3487f7;
+  border: 2px solid #23324B;
   border-radius: 2px;
-  color: #3487f7;
+  color: #23324B;
   display: inline-block;
   font-size: 17px;
   font-weight: 400;
@@ -348,7 +398,7 @@ p.cardp.long {
   transition: 0.2s ease-out;
 }
 .cta:hover {
-  background-color: #3487f7;
+  background-color: #23324B;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #fff;
   -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
