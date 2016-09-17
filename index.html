@@ -8,24 +8,27 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="white">
         <link rel="shortcut icon" type="image/png" href="images/code_1e2c36_32.png"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" media="all">
         <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="animate.css">
-        <link rel="stylesheet" href="hover.css">
-        <link rel="stylesheet" href="styling.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/hover.css">
+        <link rel="stylesheet" href="css/styling.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-64607508-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+          ga('create', 'UA-64607508-1', 'auto');
+          ga('send', 'pageview');
+        </script>
         <script src="animations.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#pic-container-lg").css("height", $("#about-text").height());
+            });
+        </script>
     </head>
 
     <body>
@@ -48,12 +51,18 @@
       <section id="about" class="section_title">
         <div class="container">
           <div class="row">
-            <h2>About Louie</h2>
-          </div>
-          <div class="row col-xs-offset-1 col-sm-offset-2 col-xs-10 col-sm-8">
-            <p>
-              My name is Louie Bertoncin, and I am a junior majoring in Computer Science at the Missouri University of Science and Technology in Rolla, Missouri. I love developing for the mobile platform and tackling difficult tasks. Some of my hobbies include playing Ultimate, running, and coding. I'm normally involved in some sort of programming project, likely throwing myself into something I've never tried before. I live life in search of new challenges in order to improve myself and keep boredom at bay.
-            </p>
+            <div class="col-xs-12" id="pic-container-sm">
+              <div id="profile-pic"></div>
+            </div>
+            <div class="col-xs-12 col-sm-7" id="about-text">
+              <h1>About Louie</h1>
+              <p>
+                My name is Louie Bertoncin, and I am a junior majoring in Computer Science at the Missouri University of Science and Technology in Rolla, Missouri. I love developing for the mobile platform and tackling difficult tasks. Some of my hobbies include playing Ultimate, running, and coding. I'm normally involved in some sort of programming project, likely throwing myself into something I've never tried before. I live life in search of new challenges in order to improve myself and keep boredom at bay.
+              </p>
+            </div>
+            <div class="col-sm-5" id="pic-container-lg">
+              <div id="profile-pic"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -61,7 +70,7 @@
       <section id="experience" class="section_title">
         <div class="container">
           <div class="row">
-            <h2>Experience</h2>
+            <h1>Experience</h1>
           </div>
           <div class="row col-xs-offset-1 col-sm-offset-2 col-xs-10 col-sm-8">
             <p>
@@ -130,7 +139,7 @@
       <section id="education" class="section_title">
         <div class="container">
           <div class="row">
-            <h2>Education</h2>
+            <h1>Education</h1>
           </div>
           <div class="row col-xs-offset-1 col-sm-offset-2 col-xs-10 col-sm-8">
             <p>
@@ -143,7 +152,7 @@
       <section id="connect" class="section_title">
         <div class="container">
           <div class="row col-xs-offset-1 col-xs-10">
-            <h2>Connections to the Outside World</h2>
+            <h1>Connections to the Outside World</h1>
           </div>
 
           <div class="row col-xs-8 col-xs-offset-2 connect-sub">
