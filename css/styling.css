@@ -1,0 +1,504 @@
+@import url("http://fonts.googleapis.com/css?family=Raleway:400,200");
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #131b2a; }
+  body p, body h1, body h2, body h3, body h4, body h5, body nav {
+    cursor: default; }
+
+.cbp-af-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: none;
+  display: block;
+  z-index: 11;
+  height: 120px;
+  overflow: hidden;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  transition: height 0.3s; }
+  .cbp-af-header .cbp-af-inner {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 1.875em; }
+  .cbp-af-header h1 {
+    display: inline-block;
+    position: relative; }
+  .cbp-af-header nav {
+    float: right;
+    display: inline-block;
+    position: relative; }
+    .cbp-af-header nav a {
+      line-height: 120px;
+      color: #aaa;
+      font-weight: 700;
+      margin: 0 0 0 20px;
+      font-size: 1.4em;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s; }
+      .cbp-af-header nav a:hover {
+        color: #e0dede; }
+  .cbp-af-header .logo {
+    line-height: 120px;
+    color: #aaa;
+    letter-spacing: 3px;
+    font-size: 3.5em;
+    margin: 0;
+    float: left;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s; }
+    .cbp-af-header .logo:hover {
+      color: #e0dede; }
+  .cbp-af-header.cbp-af-header-shrink {
+    height: 70px;
+    background-color: #131b2a; }
+    .cbp-af-header.cbp-af-header-shrink .logo {
+      line-height: 70px;
+      color: #c8c8c8;
+      font-size: 2.5em;
+      font-weight: 500; }
+    .cbp-af-header.cbp-af-header-shrink nav a {
+      line-height: 70px; }
+
+#navbar-collapse {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin-bottom: 0; }
+
+.jumbotron {
+  background-image: url("../images/billboard-lg.jpg");
+  background-size: cover;
+  background-position: center;
+  letter-spacing: 4px;
+  height: 100vh;
+  padding-top: 15%;
+  padding-bottom: 25%;
+  margin-bottom: 0; }
+  .jumbotron .name {
+    font-size: 98px;
+    padding-top: 10vh;
+    color: white;
+    font-weight: 100;
+    text-shadow: 2px 2px #000000;
+    text-align: center; }
+
+@media screen and (max-width: 767px) {
+  .cbp-af-header {
+    display: none; }
+
+  #navbar-collapse {
+    display: block; }
+
+  .jumbotron {
+    background-image: url("../images/billboard-sm.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    letter-spacing: 1px; }
+    .jumbotron .name {
+      font-size: 14vw; } }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .cbp-af-header {
+    height: 100px; }
+    .cbp-af-header .logo {
+      line-height: 100px;
+      font-size: 3em; }
+    .cbp-af-header nav a {
+      line-height: 100px;
+      font-size: 1.2em;
+      margin: 0 0 0 10px; }
+    .cbp-af-header .cbp-af-inner {
+      width: 100%; }
+
+  .jumbotron {
+    background-image: url("../images/billboard-sm.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 100vh; }
+    .jumbotron .name {
+      font-size: 9vw;
+      padding-top: 20vh; } }
+.anchor {
+  display: block;
+  position: relative;
+  top: -70px;
+  visibility: hidden; }
+  @media screen and (max-width: 767px) {
+    .anchor {
+      top: 0; } }
+
+section {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+  color: #cbcbcb; }
+  @media screen and (max-width: 767px) {
+    section {
+      min-height: 100vh; } }
+  section h1 {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 0; }
+  section p {
+    font-size: 17px;
+    line-height: 1.6em; }
+  section.about {
+    background: #4F6A82;
+    background: -webkit-linear-gradient(#4F6A82, #445d7f);
+    background: -o-linear-gradient(#4F6A82, #445d7f);
+    background: -moz-linear-gradient(#4F6A82, #445d7f);
+    background: linear-gradient(#4F6A82, #445d7f); }
+    section.about .container {
+      margin-left: 30px;
+      margin-right: 30px; }
+    section.about #pic-container-lg, section.about #pic-container-sm {
+      position: relative; }
+      section.about #pic-container-lg #profile-pic, section.about #pic-container-sm #profile-pic {
+        background-image: url("../images/profile-pic.jpg");
+        background-position: center;
+        background-repeat: none;
+        background-size: cover; }
+        @media screen and (max-width: 767px) {
+          section.about #pic-container-lg #profile-pic, section.about #pic-container-sm #profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            position: absolute;
+            top: 50%;
+            margin-left: -75px;
+            margin-top: -75px;
+            border-radius: 50%;
+            left: 50%; } }
+        @media screen and (min-width: 768px) {
+          section.about #pic-container-lg #profile-pic, section.about #pic-container-sm #profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 125px;
+            position: absolute;
+            top: 50%;
+            margin-left: -125px;
+            margin-top: -125px;
+            border-radius: 50%;
+            left: 60%; } }
+    section.about #pic-container-sm {
+      min-height: 200px;
+      margin-bottom: 15px; }
+    @media screen and (max-width: 767px) {
+      section.about {
+        text-align: center; }
+        section.about #pic-container-lg {
+          display: none; }
+        section.about #pic-container-sm {
+          display: block; } }
+    @media screen and (min-width: 768px) {
+      section.about {
+        text-align: left; }
+        section.about #pic-container-lg {
+          display: block; }
+        section.about #pic-container-sm {
+          display: none;
+          min-height: 0; } }
+  section.experience {
+    text-align: center;
+    background: #32455e;
+    background: -webkit-linear-gradient(#32455e, #324352);
+    background: -o-linear-gradient(#32455e, #324352);
+    background: -moz-linear-gradient(#32455e, #324352);
+    background: linear-gradient(#32455e, #324352); }
+    section.experience ul {
+      text-align: center; }
+      section.experience ul li {
+        margin-top: 1em; }
+    section.experience .transition {
+      transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3); }
+    section.experience .card {
+      background-color: #fff;
+      top: 0;
+      box-shadow: 0px 5px 12px 4px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0px 5px 12px 4px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 5px 12px 4px rgba(0, 0, 0, 0.5);
+      height: 300px;
+      left: 0;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 35px;
+      overflow: hidden;
+      position: relative;
+      right: 0;
+      top: 0;
+      width: 280px; }
+      section.experience .card p {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1em;
+        line-height: 1.45em;
+        font-weight: normal;
+        margin-top: 200px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 10;
+        padding: 7px; }
+        section.experience .card p.long {
+          display: none; }
+      section.experience .card .cta {
+        -moz-border-radius: 2px;
+        -moz-transition: 0.2s ease-out;
+        -ms-transition: 0.2s ease-out;
+        -o-transition: 0.2s ease-out;
+        -webkit-border-radius: 2px;
+        -webkit-transition: 0.2s ease-out;
+        background-clip: padding-box;
+        border: 2px solid #23324B;
+        border-radius: 2px;
+        color: #23324B;
+        display: inline-block;
+        font-size: 17px;
+        font-weight: 400;
+        height: 36px;
+        letter-spacing: 0.5px;
+        line-height: 35px;
+        margin-bottom: 10px;
+        padding: 0 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.2s ease-out; }
+        section.experience .card .cta:hover {
+          background-color: #23324B;
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          color: #fff;
+          -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+      section.experience .card .card_circle {
+        background: url("http://lorempixel.com/400/200") no-repeat center bottom;
+        background-color: #3487f7;
+        background-size: cover;
+        border-radius: 50%;
+        height: 400px;
+        margin-left: -40%;
+        margin-top: -270px;
+        position: relative;
+        width: 180%; }
+        section.experience .card .card_circle.miner_threat {
+          background: url("../images/miner_threat.png") no-repeat center bottom;
+          background-size: cover;
+          margin-left: -10px;
+          margin-top: -120px;
+          height: 250px;
+          width: 300px; }
+        section.experience .card .card_circle.carfax {
+          background: url("../images/carfax.png") no-repeat center bottom;
+          background-size: cover;
+          margin-left: -10px;
+          margin-top: -120px;
+          height: 250px;
+          width: 300px; }
+        section.experience .card .card_circle.chapterbuilder {
+          background: url("../images/chapterbuilder.png") no-repeat center bottom;
+          background-size: cover;
+          margin-left: 18px;
+          margin-top: 37px;
+          height: 50px;
+          width: 250px;
+          border-radius: 0px; }
+        section.experience .card .card_circle.frc_scout {
+          background: url("../images/ICON_TD_Rounded.png") no-repeat center bottom;
+          background-size: cover;
+          margin-left: -10px;
+          margin-top: -120px;
+          height: 250px;
+          width: 300px; }
+        section.experience .card .card_circle.cerner {
+          background: url("../images/cerner.png") no-repeat center bottom;
+          background-size: cover;
+          margin-left: 18px;
+          margin-top: 20px;
+          height: 70px;
+          width: 250px;
+          border-radius: 0px; }
+        section.experience .card .card_circle.jrl {
+          background: url("../images/JRL.png") no-repeat center bottom;
+          background-size: cover;
+          margin-left: -10px;
+          margin-top: -120px;
+          height: 250px;
+          width: 300px; }
+      section.experience .card h2 {
+        color: #000000;
+        font-size: 18pt;
+        font-weight: 200;
+        margin-top: 150px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 10; }
+      section.experience .card .cta-container {
+        display: none;
+        margin-top: 320px;
+        position: absolute;
+        text-align: center;
+        z-index: 10; }
+        section.experience .card .cta-container.miner_threat {
+          margin-top: 285px;
+          margin-left: -45px; }
+        section.experience .card .cta-container.chapterbuilder {
+          margin-left: -72px;
+          margin-top: 265px; }
+        section.experience .card .cta-container.jrl {
+          margin-left: -62px;
+          margin-top: 285px; }
+      section.experience .card:hover {
+        height: 335px;
+        margin-top: 5px;
+        margin-bottom: 15px; }
+        section.experience .card:hover .cta-container {
+          display: inline; }
+        section.experience .card:hover .card_circle {
+          border-radius: 0;
+          margin-top: -230px; }
+          section.experience .card:hover .card_circle.miner_threat {
+            margin-top: -115px; }
+          section.experience .card:hover .card_circle.carfax {
+            margin-top: -115px; }
+          section.experience .card:hover .card_circle.chapterbuilder {
+            margin-top: 28px; }
+          section.experience .card:hover .card_circle.frc_scout {
+            margin-top: -90px; }
+          section.experience .card:hover .card_circle.cerner {
+            margin-top: 14px; }
+          section.experience .card:hover .card_circle.jrl {
+            margin-top: -90px; }
+        section.experience .card:hover h2 {
+          background: #23324B;
+          color: #fff;
+          margin-top: 100px;
+          padding: 5px; }
+          section.experience .card:hover h2 small {
+            color: #fff; }
+        section.experience .card:hover p.long {
+          display: inherit;
+          margin-top: 169px; }
+          section.experience .card:hover p.long.miner_threat {
+            margin-top: 143px; }
+          section.experience .card:hover p.long.carfax {
+            margin-top: 158px; }
+          section.experience .card:hover p.long.chapterbuilder {
+            margin-top: 152px; }
+          section.experience .card:hover p.long.frc_scout {
+            margin-top: 160px; }
+          section.experience .card:hover p.long.cerner {
+            margin-top: 155px; }
+          section.experience .card:hover p.long.jrl {
+            margin-top: 165px; }
+        section.experience .card:hover p.short {
+          display: none; }
+      @media screen and (max-width: 767px) {
+        section.experience .card {
+          height: 335px;
+          margin-top: 5px;
+          margin-bottom: 15px; }
+          section.experience .card .cta-container {
+            display: inline; }
+          section.experience .card .card_circle {
+            border-radius: 0; }
+            section.experience .card .card_circle.miner_threat {
+              margin-top: -115px; }
+            section.experience .card .card_circle.carfax {
+              margin-top: -115px; }
+            section.experience .card .card_circle.chapterbuilder {
+              margin-top: 28px; }
+            section.experience .card .card_circle.frc_scout {
+              margin-top: -90px; }
+            section.experience .card .card_circle.cerner {
+              margin-top: 14px; }
+            section.experience .card .card_circle.jrl {
+              margin-top: -90px; }
+          section.experience .card h2 {
+            background: #23324B;
+            color: #fff;
+            margin-top: 100px;
+            padding: 5px; }
+            section.experience .card h2 small {
+              color: #fff; }
+          section.experience .card p.long {
+            display: inherit;
+            margin-top: 169px; }
+            section.experience .card p.long.miner_threat {
+              margin-top: 143px; }
+            section.experience .card p.long.carfax {
+              margin-top: 158px; }
+            section.experience .card p.long.chapterbuilder {
+              margin-top: 152px; }
+            section.experience .card p.long.frc_scout {
+              margin-top: 160px; }
+            section.experience .card p.long.cerner {
+              margin-top: 155px; }
+            section.experience .card p.long.jrl {
+              margin-top: 165px; }
+          section.experience .card p.short {
+            display: none; } }
+  section.education {
+    text-align: center;
+    background: #4F6A82;
+    background: -webkit-linear-gradient(#4F6A82, #3f608d);
+    background: -o-linear-gradient(#4F6A82, #3f608d);
+    background: -moz-linear-gradient(#4F6A82, #3f608d);
+    background: linear-gradient(#4F6A82, #3f608d); }
+    section.education ul {
+      margin-top: 30px; }
+      section.education ul li {
+        margin-top: 10px; }
+        section.education ul li img {
+          height: 150px;
+          width: 90px; }
+  section.connect {
+    text-align: center;
+    background-color: #2f486a; }
+    section.connect .connect-sub {
+      margin-bottom: 10px; }
+    section.connect i {
+      text-align: center;
+      width: 60px;
+      height: 60px;
+      color: #cbcbcb;
+      border: solid #cbcbcb 2px;
+      border-radius: 60px;
+      margin-bottom: 10px; }
+      section.connect i:hover {
+        color: #b2b2b2;
+        border: solid #b2b2b2 2px; }
+      section.connect i.github {
+        padding-top: 7px; }
+      section.connect i.twitter {
+        padding-top: 7px; }
+      section.connect i.stack-overflow {
+        padding-top: 6px; }
+      section.connect i.linkedin {
+        padding-top: 7px; }
+      section.connect i.google-plus {
+        padding-top: 8px; }
+      section.connect i.facebook {
+        padding-top: 8px; }
+  section .container {
+    width: 100%;
+    margin: 50px 10px; }
+  section hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 70%;
+    background-color: #000000;
+    height: 1px; }
+
+a:hover, a:link {
+  text-decoration: none; }
+
+/*# sourceMappingURL=styling.css.map */

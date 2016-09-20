@@ -100,7 +100,7 @@ a:hover, a:link {
 }
 
 .jumbotron {
-  background-image: url("images/billboard-lg.jpg");
+  background-image: url("../images/billboard-lg.jpg");
   background-size: cover;
   background-position: center;
   letter-spacing: 4px;
@@ -154,7 +154,7 @@ a:hover, a:link {
     line-height: 35px;
   }
   .jumbotron {
-    background-image: url("images/billboard-sm.jpg");
+    background-image: url("../images/billboard-sm.jpg");
     background-size: cover;
     background-position: top;
     height: 60vh;
@@ -185,7 +185,7 @@ a:hover, a:link {
     margin: 0 0 0 10px;
   }
   .jumbotron {
-    background-image: url("images/billboard-sm.jpg");
+    background-image: url("../images/billboard-sm.jpg");
     background-size: cover;
     background-position: top;
     height: 100vh;
@@ -303,7 +303,7 @@ hr {
   width: 180%;
 }
 .card_circle.frc_scout {
-  background: url('images/ICON_TD_Rounded.png') no-repeat center bottom;
+  background: url('../images/ICON_TD_Rounded.png') no-repeat center bottom;
   background-size: cover;
   margin-left: -10px;
   margin-top: -120px;
@@ -312,7 +312,7 @@ hr {
   border-radius: 50%;
 }
 .card_circle.cerner {
-  background: url('images/cerner.png') no-repeat center bottom;
+  background: url('../images/cerner.png') no-repeat center bottom;
   background-size: cover;
   margin-left: 18px;
   margin-top: 20px;
@@ -321,7 +321,7 @@ hr {
   border-radius: 0px;
 }
 .card_circle.chapterbuilder {
-  background: url('images/chapterbuilder.png') no-repeat center bottom;
+  background: url('../images/chapterbuilder.png') no-repeat center bottom;
   background-size: cover;
   margin-left: 18px;
   margin-top: 37px;
@@ -330,7 +330,7 @@ hr {
   border-radius: 0px;
 }
 .card_circle.jrl {
-  background: url('images/JRL.png') no-repeat center bottom;
+  background: url('../images/JRL.png') no-repeat center bottom;
   background-size: cover;
   margin-left: -10px;
   margin-top: -120px;

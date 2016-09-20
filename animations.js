@@ -1,21 +1,3 @@
-var smoothScrolling = $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        var spacing = 70;
-        if (window.innerWidth < 768) {
-          spacing = 100;
-        }
-        $('html,body').animate({
-          scrollTop: target.offset().top - spacing
-        }, 750);
-        return false;
-      }
-    }
-  });
-});
 var cbpAnimatedHeader = (function() {
 
     var docElem = document.documentElement,
