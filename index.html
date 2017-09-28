@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Louie Bertoncin | Programmer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <link rel="shortcut icon" type="image/png" href="images/code_1e2c36_32.png"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="images/code_1e2c36_32.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/animate.css">
@@ -16,44 +18,47 @@
 
     <script src="animations.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-64607508-1', 'auto');
-    ga('send', 'pageview');
+        ga('create', 'UA-64607508-1', 'auto');
+        ga('send', 'pageview');
     </script>
     <script>
-    $(document).ready(function() {
-        $("#pic-container-lg").css("height", $("#about-text").height());
+        $(document).ready(function () {
+            $("#pic-container-lg").css("height", $("#about-text").height());
 
-        $('a[href*=#]').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-          && location.hostname == this.hostname) {
-            $('.navbar-collapse.in').collapse('hide');
-            var $target = $(this.hash);
-            $target = $target.length && $target
-            || $('[name=' + this.hash.slice(1) +']');
-            if ($target.length) {
-              var targetOffset = $target.offset().top;
-              $('html,body')
-              .animate({scrollTop: targetOffset}, 750);
-             return false;
-            }
-          }
+            $('a[href*=#]').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    && location.hostname == this.hostname) {
+                    $('.navbar-collapse.in').collapse('hide');
+                    var $target = $(this.hash);
+                    $target = $target.length && $target
+                        || $('[name=' + this.hash.slice(1) + ']');
+                    if ($target.length) {
+                        var targetOffset = $target.offset().top;
+                        $('html,body')
+                            .animate({ scrollTop: targetOffset }, 750);
+                        return false;
+                    }
+                }
+            });
         });
-    });
-    $(window).resize(function() {
-        $("#pic-container-lg").css("height", $("#about-text").height());
-    });
-    $(document).on('click','.navbar-collapse.in',function(e) {
-        if( $(e.target).is('a') ) {
-            $(this).collapse('hide');
-        }
-    });
+        $(window).resize(function () {
+            $("#pic-container-lg").css("height", $("#about-text").height());
+        });
+        $(document).on('click', '.navbar-collapse.in', function (e) {
+            if ($(e.target).is('a')) {
+                $(this).collapse('hide');
+            }
+        });
     </script>
 </head>
 
@@ -105,7 +110,11 @@
                 <div class="col-sm-7" id="about-text">
                     <h1>About Louie</h1>
                     <p>
-                        My name is Louie Bertoncin, and I am a junior majoring in Computer Science at the Missouri University of Science and Technology in Rolla, Missouri. I love developing with exciting new technologies and tackling difficult tasks. Some of my hobbies include playing Ultimate, making new friends, and reading. I'm normally involved in some sort of programming project, likely throwing myself into something I've never tried before. I live life in search of new challenges in order to improve myself and keep boredom at bay.
+                        My name is Louie Bertoncin, and I am a senior majoring in Computer Science at the Missouri University of Science and Technology
+                        in Rolla, Missouri. I love developing with exciting new technologies and tackling difficult tasks.
+                        Some of my hobbies include playing Ultimate, making new friends, and reading. I'm normally involved
+                        in some sort of programming project, likely throwing myself into something I've never tried before.
+                        I live life in search of new challenges in order to improve myself and keep boredom at bay.
                     </p>
                 </div>
                 <div class="col-sm-5" id="pic-container-lg">
@@ -124,7 +133,10 @@
             <div class="row">
                 <div class="col-sm-offset-2 col-sm-8">
                     <p>
-                        My experience in the field of Computer Science consists of about five years of mostly independent research. Until I arrived at Missouri S&T, I found it difficult to acquire a formal education in this incredible field, so I have spent a great deal of time teaching myself the ins and outs of programming. Some of the products this education has enabled me to do include:
+                        My experience in the field of Computer Science consists of about five years of mostly independent research. Until I arrived
+                        at Missouri S&T, I found it difficult to acquire a formal education in this incredible field, so
+                        I have spent a great deal of time teaching myself the ins and outs of programming. Some of the products
+                        this education has enabled me to do include:
                     </p>
                 </div>
             </div>
@@ -137,7 +149,8 @@
                                 Digital signage system for campus announcements and alerts
                             </p>
                             <p class="long transition minerbytes">
-                                A part-time job I hold on campus working for a branch of my school's IT department. I am the lead front-end developer and graphic designer for their MinerBytes project.
+                                A part-time job I hold on campus working for a branch of my school's IT department. I am the lead front-end developer and
+                                graphic designer for their MinerBytes project.
                             </p>
                             <div class="cta-container transition minerbytes"><a href="https://minerbytes.mst.edu/" target="_blank" class="cta">The Project</a></div>
                             <div class="card_circle transition minerbytes"></div>
@@ -150,7 +163,8 @@
                                 Team website using React.js and Google Firebase
                             </p>
                             <p class="long transition miner_threat">
-                                It was my summer 2016 project to revamp S&T's Ultimate Frisbee team's website. The entire site is built on the React Javascript framework with Google's Firebase as a backend, and I used a Flickr API to import photo albums.
+                                It was my summer 2016 project to revamp S&T's Ultimate Frisbee team's website. The entire site is built on the React Javascript
+                                framework with Google's Firebase as a backend, and I used a Flickr API to import photo albums.
                             </p>
                             <div class="cta-container transition miner_threat"><a href="https://www.minerthreatultimate.com/" target="_blank" class="cta">The Site</a></div>
                             <div class="card_circle transition miner_threat"></div>
@@ -163,7 +177,9 @@
                                 Improving the lives of car dealers
                             </p>
                             <p class="long transition carfax">
-                                A summer 2016 internship with CARFAX gave me a plentiful amount of experience developing web apps with Java, Groovy, and React. I worked primarily on the front end, with an analytics dashboard being my most significant product.
+                                A summer 2016 internship with CARFAX gave me a plentiful amount of experience developing web apps with Java, Groovy, and
+                                React. I worked primarily on the front end, with an analytics dashboard being my most significant
+                                product.
                             </p>
                             <div class="card_circle transition carfax"></div>
                         </div>
@@ -175,7 +191,8 @@
                                 A fantastic Greek recruitment product goes mobile
                             </p>
                             <p class="long transition chapterbuilder">
-                                Over the course of about five weeks in early 2015, I developed an iOS app for ChapterBuilder to be more available to upwards of a thousand clients.
+                                Over the course of about five weeks in early 2015, I developed an iOS app for ChapterBuilder to be more available to upwards
+                                of a thousand clients.
                             </p>
                             <div class="cta-container transition chapterbuilder"><a href="https://chapterbuilder.com/" target="_blank" class="cta">The Product</a></div>
                             <div class="card_circle transition chapterbuilder"></div>
@@ -188,7 +205,9 @@
                                 The renowned iPad app for scouting FIRST Robotics matches
                             </p>
                             <p class="long transition frc_scout">
-                                Three consecutive annual releases of FRC Scout, a renowned app used by the FIRST Robotics community to gather and share information at competitions on iPads, with one of these releases receiving the honor of being featured at Apple's 2014 World Wide Developer Conference.
+                                Three consecutive annual releases of FRC Scout, a renowned app used by the FIRST Robotics community to gather and share information
+                                at competitions on iPads, with one of these releases receiving the honor of being featured
+                                at Apple's 2014 World Wide Developer Conference.
                             </p>
                             <div class="card_circle transition frc_scout"></div>
                         </div>
@@ -200,7 +219,9 @@
                                 Cerner's first widely available public Android app
                             </p>
                             <p class="long transition cerner">
-                                During an internship in the summer of 2015, I built an Android app from scratch into version 1.0. This was to be Cerner's first big Android application and was in the final stages of development when my internship ended. Not sure how much else I'm cleared to disclose.
+                                During an internship in the summer of 2015, I built an Android app from scratch into version 1.0. This was to be Cerner's
+                                first big Android application and was in the final stages of development when my internship
+                                ended. Not sure how much else I'm cleared to disclose.
                             </p>
                             <div class="card_circle transition cerner"></div>
                         </div>
@@ -212,7 +233,8 @@
                                 Impacted hundreds of young kids' lives through STEM
                             </p>
                             <p class="long transition jrl">
-                                For three years in a row, I helped put together the Junior Robotics League by designing a game and an efficient means of scoring the game on iPads for a totally electronic scorekeeping system.
+                                For three years in a row, I helped put together the Junior Robotics League by designing a game and an efficient means of
+                                scoring the game on iPads for a totally electronic scorekeeping system.
                             </p>
                             <div class="cta-container transition jrl"><a href="http://jrl.teamdriven.us/" target="_blank" class="cta">The Impact</a></div>
                             <div class="card_circle transition jrl"></div>
@@ -232,7 +254,13 @@
             <div class="row">
                 <div class="col-sm-offset-2 col-sm-8">
                     <p>
-                        I first started learning how to program through FIRST Robotics while attending Lee's Summit High School. My senior year there, I participated in Cerner's school work program for two hours of every school day, working in conjunction with a team of professional engineers. I then moved on to the Missouri University of Science and Technology, where I am currently studying. I am majoring in Computer Science (junior), have taken several classes including Databases, Algorithms, Data Structures, and a handful of C++ based classes. I consider myself confidently fluent in React.js, Java, Groovy, Sass, Swift, Objective-C, C++, Python, SQL, and HTML/CSS.
+                        I first started learning how to program through FIRST Robotics while attending Lee's Summit High School. My senior year there,
+                        I participated in Cerner's school work program for two hours of every school day, working in conjunction
+                        with a team of professional engineers. I then moved on to the Missouri University of Science and
+                        Technology, where I am currently studying. I am majoring in Computer Science (junior), have taken
+                        several classes including Databases, Algorithms, Data Structures, and a handful of C++ based classes.
+                        I consider myself confidently fluent in React.js, Java, Groovy, Sass, Swift, Objective-C, C++, Python,
+                        SQL, and HTML/CSS.
                     </p>
                 </div>
             </div>
@@ -265,48 +293,49 @@
                 </div>
             </div>
 
-                <hr>
-                <!-- Social Profiles Links -->
-                <div class="col-sm-offset-2 col-sm-8">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://github.com/louman347" target="_blank">
+            <hr>
+            <!-- Social Profiles Links -->
+            <div class="col-sm-offset-2 col-sm-8">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://github.com/louman347" target="_blank">
                                 <i class="fa fa-github fa-3x connect-icon hvr-pulse github"></i>
                             </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/ell_bert" target="_blank">
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/ell_bert" target="_blank">
                                 <i class="fa fa-twitter fa-3x connect-icon hvr-pulse twitter"></i>
                             </a>
-                        </li>
-                        <li>
-                            <a href="http://stackoverflow.com/users/2129271/louie-bertoncin" target="_blank">
+                    </li>
+                    <li>
+                        <a href="http://stackoverflow.com/users/2129271/louie-bertoncin" target="_blank">
                                 <i class="fa fa-stack-overflow fa-3x connect-icon hvr-pulse stack-overflow"></i>
                             </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/pub/louie-bertoncin/8b/60a/43b" target="_blank">
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/pub/louie-bertoncin/8b/60a/43b" target="_blank">
                                 <i class="fa fa-linkedin fa-3x connect-icon hvr-pulse linkedin"></i>
                             </a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/+LouieBertoncin" target="_blank">
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+LouieBertoncin" target="_blank">
                                 <i class="fa fa-google-plus fa-3x connect-icon hvr-pulse google-plus"></i>
                             </a>
-                        </li>
-                        <li>
-                            <a href="http://www.facebook.com/louie.bertoncin" target="_blank">
+                    </li>
+                    <li>
+                        <a href="http://www.facebook.com/louie.bertoncin" target="_blank">
                                 <i class="fa fa-facebook fa-3x connect-icon hvr-pulse facebook"></i>
                             </a>
-                        </li>
-                        <li>
-                            <a href="https://drive.google.com/file/d/0B5EFVy-EKsDoRHRaR3p0eGdkb00/view?usp=sharing" target="_blank">
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/0B5EFVy-EKsDoRHRaR3p0eGdkb00/view?usp=sharing" target="_blank">
                                 <i class="fa fa-file-text-o fa-3x connect-icon hvr-pulse resume"></i>
                             </a>
-                        </li>
-                    </ul>
-                </div>
+                    </li>
+                </ul>
             </div>
-        </section>
-    </body>
+        </div>
+    </section>
+</body>
+
 </html>
