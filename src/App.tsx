@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import styled, { keyframes, createGlobalStyle } from 'styled-components/macro'
 import logo from './logo.svg'
+import Background from './Background'
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
     margin: 0;
     padding: 0;
+  }
+
+  body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -54,19 +58,7 @@ class App extends Component {
     return (
       <AppComponent>
         <GlobalStyle />
-        <AppHeader>
-          <AppLogo src={logo} alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <AppLink
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </AppLink>
-        </AppHeader>
+        <Background />
       </AppComponent>
     )
   }
