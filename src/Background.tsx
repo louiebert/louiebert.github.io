@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import styled from 'styled-components/macro'
-
-const SPEEDSTART = 5
-const SPEEDDIFF = 20
+import { ReactComponent as Mountain1 } from './images/Mountain1.svg'
+import { ReactComponent as Mountain2 } from './images/Mountain2.svg'
+import { ReactComponent as Mountain3 } from './images/Mountain3.svg'
+import { ReactComponent as Mountain4 } from './images/Mountain4.svg'
 
 const BackgroundComponent = styled.div`
-  position: relative;
-  z-index: 10;
-  height: 200vh;
+  position: absolute;
 `
 
 const ParallaxLayer = styled.div<{
@@ -15,10 +14,17 @@ const ParallaxLayer = styled.div<{
   top: number
 }>`
   position: fixed;
-  background-color: ${props => props.inputColor};
   width: 100%;
-  padding: 100vh 0;
   top: ${props => props.top}px;
+
+  & > svg {
+    width: 100vw;
+    height: auto;
+
+    polygon {
+      fill: ${props => props.inputColor};
+    }
+  }
 `
 
 class Background extends Component {
@@ -49,16 +55,38 @@ class Background extends Component {
   render() {
     return (
       <BackgroundComponent>
-        {Array(4)
-          .fill(0)
-          .map((_, index) => (
-            <ParallaxLayer
-              className="parallax"
-              data-speed={`${SPEEDSTART + index * SPEEDDIFF}`}
-              inputColor="hsla(0, 0%, 0%, 0.3)"
-              top={100 + 200 * index}
-            />
-          ))}
+        <ParallaxLayer
+          className="parallax"
+          data-speed={15}
+          inputColor="hsla(0, 0%, 15%, 1.0)"
+          top={150}
+        >
+          <Mountain4 />
+        </ParallaxLayer>
+        <ParallaxLayer
+          className="parallax"
+          data-speed={20}
+          inputColor="hsla(0, 0%, 20%, 1.0)"
+          top={150}
+        >
+          <Mountain3 />
+        </ParallaxLayer>
+        <ParallaxLayer
+          className="parallax"
+          data-speed={32}
+          inputColor="hsla(0, 0%, 28%, 1.0)"
+          top={220}
+        >
+          <Mountain2 />
+        </ParallaxLayer>
+        <ParallaxLayer
+          className="parallax"
+          data-speed={48}
+          inputColor="hsla(0, 0%, 40%, 1.0)"
+          top={500}
+        >
+          <Mountain1 />
+        </ParallaxLayer>
       </BackgroundComponent>
     )
   }
