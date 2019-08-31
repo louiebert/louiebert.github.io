@@ -5,29 +5,18 @@ import { ReactComponent as Mountain2 } from './images/Mountain2.svg'
 import { ReactComponent as Mountain3 } from './images/Mountain3.svg'
 import { ReactComponent as Mountain4 } from './images/Mountain4.svg'
 
-const BackgroundComponent = styled.div`
-  position: absolute;
-`
+type State = {
+  yOffset: number
+}
 
-const ParallaxLayer = styled.div<{
-  inputColor: string
-  top: number
-}>`
-  position: fixed;
-  width: 100%;
-  top: ${props => props.top}px;
-
-  & > svg {
-    width: 100vw;
-    height: auto;
-
-    polygon {
-      fill: ${props => props.inputColor};
+class Background extends Component<{}, State> {
+  constructor(props: any) {
+    super(props)
+    this.state = {
+      yOffset: 0
     }
   }
-`
 
-class Background extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.backgroundScroll)
   }
@@ -37,19 +26,11 @@ class Background extends Component {
   }
 
   backgroundScroll = () => {
-    var top = window.pageYOffset
+    this.setState({ yOffset: window.pageYOffset })
+  }
 
-    var layers = document.getElementsByClassName('parallax')
-    var layer: Element, speed: string | null, yPos: number
-    for (var i = 0; i < layers.length; i++) {
-      layer = layers[i]
-      speed = layer.getAttribute('data-speed')
-      yPos = -((top * parseInt(speed || '0')) / 100)
-      layer.setAttribute(
-        'style',
-        'transform: translate3d(0px, ' + yPos + 'px, 0px)'
-      )
-    }
+  calcYPos = (speed: number) => {
+    return -((this.state.yOffset * speed) / 100)
   }
 
   render() {
@@ -57,33 +38,33 @@ class Background extends Component {
       <BackgroundComponent>
         <ParallaxLayer
           className="parallax"
-          data-speed={15}
           inputColor="hsla(0, 0%, 15%, 1.0)"
           top={150}
+          style={{ transform: `translate3d(0px, ${this.calcYPos(15)}px, 0px)` }}
         >
           <Mountain4 />
         </ParallaxLayer>
         <ParallaxLayer
           className="parallax"
-          data-speed={20}
           inputColor="hsla(0, 0%, 20%, 1.0)"
           top={150}
+          style={{ transform: `translate3d(0px, ${this.calcYPos(20)}px, 0px)` }}
         >
           <Mountain3 />
         </ParallaxLayer>
         <ParallaxLayer
           className="parallax"
-          data-speed={32}
           inputColor="hsla(0, 0%, 28%, 1.0)"
           top={220}
+          style={{ transform: `translate3d(0px, ${this.calcYPos(32)}px, 0px)` }}
         >
           <Mountain2 />
         </ParallaxLayer>
         <ParallaxLayer
           className="parallax"
-          data-speed={48}
           inputColor="hsla(0, 0%, 40%, 1.0)"
           top={500}
+          style={{ transform: `translate3d(0px, ${this.calcYPos(48)}px, 0px)` }}
         >
           <Mountain1 />
         </ParallaxLayer>
@@ -91,5 +72,25 @@ class Background extends Component {
     )
   }
 }
+
+const BackgroundComponent = styled.div`
+  position: absolute;
+`
+
+const ParallaxLayer = styled.div<{
+  inputColor: string
+  top: number
+}>`
+  position: fixed;
+  top: ${props => props.top}px;
+
+  & > svg {
+    width: 100vw;
+
+    polygon {
+      fill: ${props => props.inputColor};
+    }
+  }
+`
 
 export default Background
