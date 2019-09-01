@@ -44,13 +44,13 @@ class Background extends Component {
   }
 }
 
-const perspective = 1
+const PERSPECTIVE = 1
 
 const BackgroundComponent = styled.div`
   height: 100vmin;
   overflow-x: hidden;
   overflow-y: auto;
-  perspective: ${perspective}px;
+  perspective: ${PERSPECTIVE}px;
 `
 
 const ParallaxLayer = styled.div<{
@@ -63,11 +63,9 @@ const ParallaxLayer = styled.div<{
   right: 0;
   bottom: 0;
   left: 0;
-  background: none;
-  justify-content: center;
 
   transform: translateZ(-${props => props.translateZ}px)
-    scale(${props => 1 + props.translateZ / perspective});
+    scale(${props => 1 + props.translateZ / PERSPECTIVE});
   z-index: -1;
 
   & > svg {
