@@ -37,17 +37,13 @@ class Background extends Component<{}, State> {
     return (
       <BackgroundComponent>
         <ParallaxLayer
-          className="parallax"
           inputColor="hsla(0, 0%, 15%, 1.0)"
-          top={150}
-          style={{ transform: `translate3d(0px, ${this.calcYPos(15)}px, 0px)` }}
-        >
-          <Mountain4 />
-        </ParallaxLayer>
+          backgroundImageUrl="./images/Mountain1.svg"
+        />
+        {/*         
         <ParallaxLayer
           className="parallax"
           inputColor="hsla(0, 0%, 20%, 1.0)"
-          top={150}
           style={{ transform: `translate3d(0px, ${this.calcYPos(20)}px, 0px)` }}
         >
           <Mountain3 />
@@ -55,7 +51,6 @@ class Background extends Component<{}, State> {
         <ParallaxLayer
           className="parallax"
           inputColor="hsla(0, 0%, 28%, 1.0)"
-          top={220}
           style={{ transform: `translate3d(0px, ${this.calcYPos(32)}px, 0px)` }}
         >
           <Mountain2 />
@@ -63,26 +58,45 @@ class Background extends Component<{}, State> {
         <ParallaxLayer
           className="parallax"
           inputColor="hsla(0, 0%, 40%, 1.0)"
-          top={500}
           style={{ transform: `translate3d(0px, ${this.calcYPos(48)}px, 0px)` }}
         >
           <Mountain1 />
-        </ParallaxLayer>
+        </ParallaxLayer> 
+        */}
+
+        {this.props.children}
       </BackgroundComponent>
     )
   }
 }
 
 const BackgroundComponent = styled.div`
-  position: absolute;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
 `
 
 const ParallaxLayer = styled.div<{
   inputColor: string
-  top: number
+  backgroundImageUrl: string
 }>`
-  position: fixed;
-  top: ${props => props.top}px;
+  position: relative;
+
+  & ::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transform: translateZ(-1px) scale(1.5px);
+    background-size: 100%;
+    z-index: -1;
+
+    background-image: url(${props => props.backgroundImageUrl});
+  }
 
   & > svg {
     width: 100vw;

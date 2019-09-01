@@ -1,6 +1,17 @@
 import React, { Component } from 'react'
-import styled, { keyframes, createGlobalStyle } from 'styled-components/macro'
+import styled, { createGlobalStyle } from 'styled-components/macro'
 import Background from './Background'
+
+class App extends Component {
+  render() {
+    return (
+      <AppComponent>
+        <GlobalStyle />
+        <Background>{/* actual app code will go here */}</Background>
+      </AppComponent>
+    )
+  }
+}
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -21,16 +32,5 @@ const AppComponent = styled.div`
   /* TODO: remove */
   height: 200vh;
 `
-
-class App extends Component {
-  render() {
-    return (
-      <AppComponent>
-        <GlobalStyle />
-        <Background />
-      </AppComponent>
-    )
-  }
-}
 
 export default App
