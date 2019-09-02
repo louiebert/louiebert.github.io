@@ -9,24 +9,32 @@ class Background extends Component {
   render() {
     return (
       <BackgroundComponent>
+        <ParallaxRect
+          inputColor="hsla(0, 0%, 85%, 1.0)"
+          translateZ={7}
+          marginTop={-100}
+          height={70}
+        />
         <ParallaxLayer
           inputColor="hsla(0, 0%, 40%, 1.0)"
-          translateZ={10}
-          marginTop={10}
+          translateZ={9}
+          marginTop={6}
         >
           <Mountain1 />
         </ParallaxLayer>
         <ParallaxLayer
           inputColor="hsla(0, 0%, 28%, 1.0)"
           translateZ={7}
-          marginTop={25}
+          marginTop={26}
+          smallMarginTop={23}
         >
           <Mountain2 />
         </ParallaxLayer>
         <ParallaxLayer
-          inputColor="hsla(0, 0%, 20%, 1.0)"
-          translateZ={5}
-          marginTop={32}
+          inputColor="hsla(0, 0%, 100%, 1.0)"
+          translateZ={6}
+          marginTop={28}
+          smallMarginTop={21}
           height={25}
         >
           <Signature />
@@ -34,23 +42,19 @@ class Background extends Component {
         <ParallaxLayer
           inputColor="hsla(0, 0%, 20%, 1.0)"
           translateZ={4}
-          marginTop={42}
+          marginTop={43}
         >
           <Mountain3 />
         </ParallaxLayer>
         <ParallaxLayer
           inputColor="hsla(0, 0%, 15%, 1.0)"
           translateZ={2}
-          marginTop={62}
+          marginTop={55}
+          height={150}
+          smallMarginTop={44}
         >
           <Mountain4 />
         </ParallaxLayer>
-        <ParallaxRect
-          inputColor="hsla(0, 0%, 15%, 1.0)"
-          translateZ={2}
-          marginTop={452}
-          height={400}
-        />
 
         <PageContent />
         {this.props.children}
@@ -73,6 +77,7 @@ const ParallaxLayer = styled.div<{
   translateZ: number
   marginTop: number
   height?: number
+  smallMarginTop?: number
 }>`
   position: absolute;
   top: 0;
@@ -88,7 +93,14 @@ const ParallaxLayer = styled.div<{
     margin-top: ${props => props.marginTop}vmin;
     height: ${props => (props.height ? props.height : 50)}vw;
     width: 100vw;
-    polygon {
+
+    @media (max-aspect-ratio: 13/10) {
+      margin-top: ${props =>
+        props.smallMarginTop ? props.smallMarginTop : props.marginTop}vmin;
+    }
+
+    polygon,
+    path {
       fill: ${props => props.inputColor};
     }
   }
@@ -104,7 +116,7 @@ const ParallaxRect = styled.div<{
   right: 0;
   left: 0;
 
-  height: 100%;
+  height: ${props => props.height}vmin;
   background-color: ${props => props.inputColor};
 
   transform: translateZ(-${props => props.translateZ}px)
@@ -113,7 +125,7 @@ const ParallaxRect = styled.div<{
 `
 
 const PageContent = styled.div`
-  height: 6000px;
+  height: 10000px;
 `
 
 export default Background
