@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  plugins: [tailwindcss()],
   // Serve static files from the root directory
   root: ".",
 
@@ -46,13 +48,4 @@ export default defineConfig({
 
   // Base path for GitHub Pages deployment
   base: "./",
-
-  // CSS configuration
-  css: {
-    postcss: {
-      plugins: [
-        // For now, we'll use the simpler approach without the TailwindCSS Vite plugin
-      ],
-    },
-  },
 });

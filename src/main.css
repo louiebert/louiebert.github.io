@@ -1,0 +1,7 @@
+/* Import existing custom styles first */
+@import url("../css/animate.css");
+@import url("../css/hover.css");
+@import url("../css/styling.css");
+
+/* Tailwind CSS directives */
+@import "tailwindcss";
