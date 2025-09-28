@@ -2,3 +2,42 @@ _site
 .sass-cache
 .jekyll-metadata
 .history
+
+# Claude Code local settings
+.claude/
+
+# Vite
+dist/
+node_modules/
+*.log
+.DS_Store
+
+# Environment and config files
+.env
+.env.local
+.env.production
+.env.development
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Package manager (keep package-lock.json for reproducible builds)
+yarn.lock
+pnpm-lock.yaml
+
+# Build and cache
+.cache/
+.temp/
+.tmp/
+.vite/
+
+# Runtime and debugging
+*.tsbuildinfo
+.eslintcache
