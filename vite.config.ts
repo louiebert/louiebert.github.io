@@ -1,24 +1,26 @@
-import { defineConfig } from "vite";
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [tailwindcss()],
+  plugins: [react(), tailwindcss()],
   // Serve static files from the root directory
-  root: ".",
+  root: '.',
 
   // Public directory for static assets
-  publicDir: "public",
+  publicDir: 'public',
 
   // Build configuration
   build: {
     // Output directory for built files
-    outDir: "dist",
+    outDir: 'dist',
 
     // Don't minify for easier debugging
     minify: false,
 
     // Assets directory within outDir
-    assetsDir: "assets",
+    assetsDir: 'assets',
 
     // Generate source maps for debugging
     sourcemap: true,
@@ -29,7 +31,7 @@ export default defineConfig({
     // Rollup options
     rollupOptions: {
       input: {
-        main: "./index.html",
+        main: './index.html',
       },
     },
   },
@@ -47,5 +49,11 @@ export default defineConfig({
   },
 
   // Base path for GitHub Pages deployment
-  base: "./",
+  base: './',
+
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
 });

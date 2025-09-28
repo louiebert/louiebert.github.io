@@ -18,10 +18,10 @@ This is a personal portfolio website for Louie Bertoncin, built as a static sing
 **Key Files:**
 
 - `index.html` - Main entry point with all HTML content
-- `animations.js` - Header scroll animation logic
-- `css/styling.css` - Primary custom styles
-- `css/animate.css` - CSS animation library
-- `css/hover.css` - Hover effect styles
+- `animations.ts` - Header scroll animation logic
+- `src/css/styling.css` - Primary custom styles
+- `src/css/animate.css` - CSS animation library
+- `src/css/hover.css` - Hover effect styles
 - `vite.config.js` - Vite configuration for development and build
 - `package.json` - Node.js dependencies and npm scripts
 - `CNAME` - Custom domain configuration for GitHub Pages
@@ -92,7 +92,7 @@ This is a personal portfolio website for Louie Bertoncin, built as a static sing
 
 - Vanilla JavaScript for animations (no frameworks)
 - jQuery for DOM manipulation and event handling
-- IIFE pattern for encapsulation in animations.js
+- IIFE pattern for encapsulation in animations.ts
 
 ## Common Development Tasks
 
@@ -104,9 +104,9 @@ This is a personal portfolio website for Louie Bertoncin, built as a static sing
 
 **Styling Changes:**
 
-- Primary styles in `css/styling.css`
-- Animation timing and effects in `animations.js`
-- Hover effects configured in `css/hover.css`
+- Primary styles in `src/css/styling.css`
+- Animation timing and effects in `animations.ts`
+- Hover effects configured in `src/css/hover.css`
 
 **Image Management:**
 
