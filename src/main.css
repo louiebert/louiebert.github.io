@@ -5,3 +5,9 @@
 
 /* Tailwind CSS directives */
 @import "tailwindcss";
+
+/* Custom theme configuration for Tailwind CSS v4 */
+@theme {
+  --font-family-raleway: Raleway, sans-serif;
+  --color-slate-custom-800: #131b2a;
+}

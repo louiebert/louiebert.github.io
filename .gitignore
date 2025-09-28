@@ -40,3 +40,6 @@ pnpm-lock.yaml
 # Runtime and debugging
 *.tsbuildinfo
 .eslintcache
+
+# Temporary files
+*.local.*
