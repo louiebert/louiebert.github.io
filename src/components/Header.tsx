@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '0px 0px -50px 0px', // Trigger when element is 50px from top
+      rootMargin: '-100px 0px 0px 0px',
       threshold: 0,
     };
 
@@ -34,6 +34,13 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
       <div className="mx-auto px-2 container">
@@ -43,15 +50,16 @@ const Header: React.FC = () => {
             isShrunken && 'h-10',
           )}
         >
-          <a
-            href="#"
+          <button
+            type="button"
+            onClick={scrollToTop}
             className={cn(
-              'text-xl font-bold transition-all duration-200',
+              'text-xl font-bold transition-all duration-200 cursor-pointer hover:opacity-80',
               isShrunken && 'text-lg',
             )}
           >
             Louie Bertoncin
-          </a>
+          </button>
         </div>
       </div>
     </header>

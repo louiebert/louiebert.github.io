@@ -2,44 +2,6 @@ body {
   @apply font-raleway bg-slate-custom-800;
 }
 
-body p,
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body nav {
-  @apply cursor-default;
-}
-
-body a:hover,
-body a:link {
-  @apply no-underline;
-}
-
-hr {
-  @apply block w-[70%] h-px border-0 bg-black clear-both;
-}
-
-.name {
-  @apply pt-[10vh] text-white text-center font-thin;
-  font-size: 98px;
-  text-shadow: 2px 2px #000000;
-}
-
-@media screen and (max-width: 767px) {
-  .name {
-    font-size: 14vw;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .name {
-    @apply pt-[20vh];
-    font-size: 9vw;
-  }
-}
-
 .anchor {
   @apply relative -top-[70px] block invisible;
 }
@@ -437,6 +399,32 @@ section.connect i.google-plus {
 }
 section.connect i.facebook {
   @apply pt-2 pr-[3px];
+}
+
+/* Custom Tailwind Animations */
+@keyframes zoomInDown {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+}
+
+.animate-zoom-in-down {
+  animation-name: zoomInDown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 /*# sourceMappingURL=styling.css.map */
