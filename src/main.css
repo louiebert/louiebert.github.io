@@ -1,10 +1,9 @@
 /* Import existing custom styles first */
-@import url("./css/hover.css");
-@import url("./css/styling.css");
+@import url('./css/styling.css');
 
 /* Tailwind CSS directives */
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -12,6 +11,17 @@
 @theme {
   --font-family-raleway: Raleway, sans-serif;
   --color-slate-custom-800: #131b2a;
+
+  --animate-wiggle: wiggle 0.4s linear infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
 }
 
 @theme inline {

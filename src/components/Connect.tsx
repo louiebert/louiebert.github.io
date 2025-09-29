@@ -6,11 +6,17 @@ interface SocialLinkProps {
   className: string;
 }
 
-const SocialLink: React.FC<SocialLinkProps> = ({ href, iconClass, className }) => {
+const SocialLink: React.FC<SocialLinkProps> = ({
+  href,
+  iconClass,
+  className,
+}) => {
   return (
     <li>
       <a href={href} target="_blank" rel="noopener noreferrer">
-        <i className={`fa ${iconClass} fa-3x connect-icon hvr-pulse ${className}`}></i>
+        <i
+          className={`fa ${iconClass} fa-3x connect-icon hover:animate-wiggle  ${className}`}
+        />
       </a>
     </li>
   );
@@ -19,30 +25,30 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, iconClass, className }) =
 const Connect: React.FC = () => {
   const socialLinks = [
     {
-      href: "https://github.com/louiebert",
-      iconClass: "fa-github",
-      className: "github"
+      href: 'https://github.com/louiebert',
+      iconClass: 'fa-github',
+      className: 'github',
     },
     {
-      href: "https://twitter.com/louiebrt",
-      iconClass: "fa-twitter",
-      className: "twitter"
+      href: 'https://twitter.com/louiebrt',
+      iconClass: 'fa-twitter',
+      className: 'twitter',
     },
     {
-      href: "http://stackoverflow.com/users/2129271/louie-bertoncin",
-      iconClass: "fa-stack-overflow",
-      className: "stack-overflow"
+      href: 'http://stackoverflow.com/users/2129271/louie-bertoncin',
+      iconClass: 'fa-stack-overflow',
+      className: 'stack-overflow',
     },
     {
-      href: "https://www.linkedin.com/pub/louie-bertoncin/8b/60a/43b",
-      iconClass: "fa-linkedin",
-      className: "linkedin"
+      href: 'https://www.linkedin.com/pub/louie-bertoncin/8b/60a/43b',
+      iconClass: 'fa-linkedin',
+      className: 'linkedin',
     },
     {
-      href: "http://www.facebook.com/louie.bertoncin",
-      iconClass: "fa-facebook",
-      className: "facebook"
-    }
+      href: 'http://www.facebook.com/louie.bertoncin',
+      iconClass: 'fa-facebook',
+      className: 'facebook',
+    },
   ];
 
   return (
