@@ -1,179 +1,137 @@
-@import url("http://fonts.googleapis.com/css?family=Raleway:400,200");
 body {
-  font-family: 'Raleway', sans-serif;
-  background-color: #131b2a; }
-  body p, body h1, body h2, body h3, body h4, body h5, body nav {
-    cursor: default; }
-  body a:hover, body a:link {
-    text-decoration: none; }
+  @apply font-raleway bg-slate-custom-800;
+}
+
+body p, body h1, body h2, body h3, body h4, body h5, body nav {
+  @apply cursor-default;
+}
+
+body a:hover, body a:link {
+  @apply no-underline;
+}
 
 hr {
-  display: block;
-  width: 70%;
-  height: 1px;
-  border: 0;
-  background-color: #000000;
-  clear: both; }
+  @apply block w-[70%] h-px border-0 bg-black clear-both;
+}
 
 .cbp-af-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 11;
-  display: block;
-  width: 100%;
+  @apply fixed top-0 left-0 z-[11] block w-full overflow-hidden;
   height: 120px;
   background: none;
-  overflow: hidden;
-  -webkit-transition: height 0.3s;
-  -moz-transition: height 0.3s;
-  transition: height 0.3s; }
+  transition: height 0.3s;
+}
   .cbp-af-header .cbp-af-inner {
-    width: 95%;
+    @apply w-[95%] mx-auto;
     padding: 0 1.875em;
-    margin: 0 auto; }
+  }
   .cbp-af-header h1 {
-    position: relative;
-    display: inline-block; }
+    @apply relative inline-block;
+  }
   .cbp-af-header nav {
-    float: right;
-    position: relative;
-    display: inline-block; }
+    @apply float-right relative inline-block;
+  }
     .cbp-af-header nav a {
-      margin: 0 0 0 20px;
+      @apply ml-5 font-bold text-lg text-gray-400 transition-all duration-300;
       line-height: 120px;
-      color: #aaa;
-      font-weight: 700;
       font-size: 1.4em;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s; }
+    }
       .cbp-af-header nav a:hover {
-        color: #e0dede; }
+        @apply text-gray-300;
+      }
   .cbp-af-header .logo {
-    float: left;
-    margin: 0;
+    @apply float-left m-0 text-gray-400 tracking-[3px] transition-all duration-300;
     line-height: 120px;
-    color: #aaa;
-    letter-spacing: 3px;
     font-size: 3.5em;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s; }
+  }
     .cbp-af-header .logo:hover {
-      color: #e0dede; }
+      @apply text-gray-300;
+    }
   .cbp-af-header.cbp-af-header-shrink {
+    @apply bg-slate-custom-800;
     height: 70px;
-    background-color: #131b2a; }
+  }
     .cbp-af-header.cbp-af-header-shrink .logo {
-      color: #c8c8c8;
+      @apply text-gray-300 font-medium;
       line-height: 70px;
       font-size: 2.5em;
-      font-weight: 500; }
+    }
     .cbp-af-header.cbp-af-header-shrink nav a {
-      line-height: 70px; }
+      line-height: 70px;
+    }
 
-#navbar-collapse {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  display: none;
-  margin-bottom: 0; }
-
-.jumbotron {
-  height: 100vh;
-  padding-top: 15%;
-  padding-bottom: 25%;
-  margin-bottom: 0;
-  background-image: url("../images/billboard-lg.jpg");
-  background-size: cover;
-  background-position: center;
-  letter-spacing: 4px; }
-  .jumbotron .name {
-    padding-top: 10vh;
-    color: white;
-    font-size: 98px;
-    font-weight: 100;
-    text-shadow: 2px 2px #000000;
-    text-align: center; }
 
 @media screen and (max-width: 767px) {
   .cbp-af-header {
-    display: none; }
+    @apply hidden;
+  }
+  .anchor {
+    @apply top-0;
+  }
+}
 
-  #navbar-collapse {
-    display: block; }
-
-  .jumbotron {
-    height: 100%;
-    background-image: url("../images/billboard-sm.jpg");
-    background-size: cover;
-    background-position: top;
-    letter-spacing: 1px; }
-    .jumbotron .name {
-      font-size: 14vw; } }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .cbp-af-header {
-    height: 100px; }
+    height: 100px;
+  }
     .cbp-af-header .logo {
       line-height: 100px;
-      font-size: 3em; }
+      font-size: 3em;
+    }
     .cbp-af-header nav a {
-      margin: 0 0 0 10px;
+      @apply ml-2.5;
       line-height: 100px;
-      font-size: 1.2em; }
+      font-size: 1.2em;
+    }
     .cbp-af-header .cbp-af-inner {
-      width: 100%; }
+      @apply w-full;
+    }
+}
 
-  .jumbotron {
-    height: 100vh;
-    background-image: url("../images/billboard-sm.jpg");
-    background-size: cover;
-    background-position: top; }
-    .jumbotron .name {
-      padding-top: 20vh;
-      font-size: 9vw; } }
+.name {
+  @apply pt-[10vh] text-white text-center font-thin;
+  font-size: 98px;
+  text-shadow: 2px 2px #000000;
+}
+
+@media screen and (max-width: 767px) {
+  .name {
+    font-size: 14vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .name {
+    @apply pt-[20vh];
+    font-size: 9vw;
+  }
+}
+
 .anchor {
-  position: relative;
-  top: -70px;
-  display: block;
-  visibility: hidden; }
-  @media screen and (max-width: 767px) {
-    .anchor {
-      top: 0; } }
+  @apply relative -top-[70px] block invisible;
+}
 
-.container {
-  width: 100%;
-  margin: 50px 10px; }
 
 section {
-  position: relative;
-  display: flex;
+  @apply relative flex items-center text-gray-300;
   min-height: calc(100vh - 70px);
-  color: #cbcbcb;
-  align-items: center; }
+}
   @media screen and (max-width: 767px) {
     section {
-      min-height: 100vh; } }
+      @apply min-h-screen;
+    }
+  }
   section h1 {
-    margin-top: 0;
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 1px; }
+    @apply mt-0 text-4xl font-bold tracking-wide;
+  }
   section p {
-    font-size: 17px;
-    line-height: 1.6em; }
+    @apply text-lg leading-relaxed;
+  }
   section.about {
     background: #4F6A82;
     background: -webkit-linear-gradient(#4F6A82, #445d7f);
     background: -o-linear-gradient(#4F6A82, #445d7f);
     background: -moz-linear-gradient(#4F6A82, #445d7f);
     background: linear-gradient(#4F6A82, #445d7f); }
-    section.about .container {
-      margin-left: 30px;
-      margin-right: 30px; }
     section.about #pic-container-lg, section.about #pic-container-sm {
       position: relative; }
       section.about #pic-container-lg #profile-pic, section.about #pic-container-sm #profile-pic {
@@ -417,46 +375,49 @@ section {
               section.experience ul .card-li .card p.short {
                 display: none; } }
   section.education {
-    text-align: center;
+    @apply text-center;
     background: #4F6A82;
     background: -webkit-linear-gradient(#4F6A82, #3f608d);
     background: -o-linear-gradient(#4F6A82, #3f608d);
     background: -moz-linear-gradient(#4F6A82, #3f608d);
-    background: linear-gradient(#4F6A82, #3f608d); }
+    background: linear-gradient(#4F6A82, #3f608d);
+  }
     section.education ul {
-      margin-top: 30px; }
+      @apply mt-8;
+    }
       section.education ul li {
-        margin-top: 10px; }
+        @apply mt-2.5;
+      }
         section.education ul li img {
-          height: 150px;
-          width: 90px; }
+          @apply h-[150px] w-[90px];
+        }
   section.connect {
-    text-align: center;
-    background-color: #2f486a; }
+    @apply text-center;
+    background-color: #2f486a;
+  }
     section.connect .connect-sub {
-      margin-bottom: 10px; }
+      @apply mb-2.5;
+    }
     section.connect i {
-      width: 60px;
-      height: 60px;
-      border: solid #cbcbcb 2px;
-      border-radius: 60px;
-      margin-bottom: 10px;
-      color: #cbcbcb;
-      text-align: center; }
+      @apply w-[60px] h-[60px] border-2 border-gray-300 rounded-full mb-2.5 text-gray-300 text-center;
+    }
       section.connect i:hover {
-        border: solid #b2b2b2 2px;
-        color: #b2b2b2; }
+        @apply border-gray-400 text-gray-400;
+      }
       section.connect i.github {
-        padding-top: 7px;
-        padding-left: 1px; }
+        @apply pt-[7px] pl-px;
+      }
       section.connect i.twitter, section.connect i.linkedin {
-        padding-top: 7px; }
+        @apply pt-[7px];
+      }
       section.connect i.stack-overflow, section.connect i.resume {
-        padding-top: 6px; }
+        @apply pt-1.5;
+      }
       section.connect i.google-plus {
-        padding-top: 8px; }
+        @apply pt-2;
+      }
       section.connect i.facebook {
-        padding-top: 8px;
-        padding-right: 3px; }
+        @apply pt-2 pr-[3px];
+      }
 
 /*# sourceMappingURL=styling.css.map */
