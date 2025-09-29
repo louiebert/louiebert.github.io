@@ -1,70 +1,68 @@
-import React from 'react';
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from '@/ui/navigation-menu';
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from '@/ui/navigation-menu';
+import React, { useEffect, useState } from 'react';
+import { cn } from '../lib/utils';
 
 const Header: React.FC = () => {
-  // COMMENTED OUT: Custom animations and scroll handling - may restore later
-  // const [isShrunken, setIsShrunken] = useState(false);
+  const [isShrunken, setIsShrunken] = useState(false);
 
-  // useEffect(() => {
-  //   let didScroll = false;
+  useEffect(() => {
+    let didScroll = false;
 
-  //   const handleScroll = () => {
-  //     if (!didScroll) {
-  //       didScroll = true;
-  //       setTimeout(() => {
-  //         const titleNameElement = document.getElementById('titleName');
-  //         let changeHeaderOn = 50;
+    const handleScroll = () => {
+      if (!didScroll) {
+        didScroll = true;
+        setTimeout(() => {
+          const titleNameElement = document.getElementById('titleName');
+          let changeHeaderOn = 50;
 
-  //         if (titleNameElement) {
-  //           changeHeaderOn = titleNameElement.getBoundingClientRect().top;
-  //         }
+          if (titleNameElement) {
+            changeHeaderOn = titleNameElement.getBoundingClientRect().top;
+          }
 
-  //         const sy = window.pageYOffset || document.documentElement.scrollTop;
-  //         setIsShrunken(sy >= changeHeaderOn);
-  //         didScroll = false;
-  //       }, 50);
-  //     }
-  //   };
+          const sy = window.pageYOffset || document.documentElement.scrollTop;
+          setIsShrunken(sy >= changeHeaderOn);
+          didScroll = false;
+        }, 50);
+      }
+    };
 
-  //   const handleSmoothScroll = (e: Event) => {
-  //     const target = e.target as HTMLAnchorElement;
-  //     if (target.getAttribute('href')?.startsWith('#')) {
-  //       e.preventDefault();
-  //       const targetId = target.getAttribute('href')?.slice(1);
-  //       const targetElement = document.getElementById(targetId || '');
+    const handleSmoothScroll = (e: Event) => {
+      const target = e.target as HTMLAnchorElement;
+      if (target.getAttribute('href')?.startsWith('#')) {
+        e.preventDefault();
+        const targetId = target.getAttribute('href')?.slice(1);
+        const targetElement = document.getElementById(targetId || '');
 
-  //       if (targetElement) {
-  //         const targetOffset = targetElement.offsetTop;
-  //         window.scrollTo({
-  //           top: targetOffset,
-  //           behavior: 'smooth'
-  //         });
-  //       }
-  //     }
-  //   };
+        if (targetElement) {
+          const targetOffset = targetElement.offsetTop;
+          window.scrollTo({
+            top: targetOffset,
+            behavior: 'smooth',
+          });
+        }
+      }
+    };
 
-  //   window.addEventListener('scroll', handleScroll, false);
+    window.addEventListener('scroll', handleScroll, false);
 
-  //   // Add click listeners to navigation links
-  //   const navLinks = document.querySelectorAll('nav a[href^="#"]');
-  //   navLinks.forEach(link => {
-  //     link.addEventListener('click', handleSmoothScroll);
-  //   });
+    // Add click listeners to navigation links
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', handleSmoothScroll);
+    });
 
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll, false);
-  //     navLinks.forEach(link => {
-  //       link.removeEventListener('click', handleSmoothScroll);
-  //     });
-  //   };
-  // }, []);
-
-  // const toggleMobileMenu = () => {
-  //   const menu = document.getElementById('navbarCollapse');
-  //   if (menu) {
-  //     menu.classList.toggle('hidden');
-  //   }
-  // };
+    return () => {
+      window.removeEventListener('scroll', handleScroll, false);
+      navLinks.forEach((link) => {
+        link.removeEventListener('click', handleSmoothScroll);
+      });
+    };
+  }, []);
 
   return (
     <>
@@ -95,25 +93,22 @@ const Header: React.FC = () => {
         </div>
       </nav> */}
 
-      {/* COMMENTED OUT: Original main header with custom CSS classes */}
-      {/* <div className={`cbp-af-header${isShrunken ? ' cbp-af-header-shrink' : ''}`} id="header">
-        <div className="cbp-af-inner">
-          <a className="logo" href="" id="navbar-home">Louie</a>
-          <nav>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#connect">Connect</a>
-          </nav>
-        </div>
-      </div> */}
-
       {/* NEW: shadcn NavigationMenu Implementation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            {/* Brand */}
-            <a href="#" className="text-xl font-bold">
+        <div className="mx-auto px-2 container">
+          <div
+            className={cn(
+              'flex items-center justify-between h-16 transition-all duration-200',
+              isShrunken && 'h-10',
+            )}
+          >
+            <a
+              href="#"
+              className={cn(
+                'text-xl font-bold transition-all duration-200',
+                isShrunken && 'text-lg',
+              )}
+            >
               Louie Bertoncin
             </a>
 
@@ -121,9 +116,7 @@ const Header: React.FC = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuLink href="#about">
-                    About
-                  </NavigationMenuLink>
+                  <NavigationMenuLink href="#about">About</NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuLink href="#experience">
