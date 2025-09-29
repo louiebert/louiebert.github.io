@@ -5,30 +5,32 @@ const Header: React.FC = () => {
   const [isShrunken, setIsShrunken] = useState(false);
 
   useEffect(() => {
-    let didScroll = false;
-
-    const handleScroll = () => {
-      if (!didScroll) {
-        didScroll = true;
-        setTimeout(() => {
-          const titleNameElement = document.getElementById('titleName');
-          let changeHeaderOn = 50;
-
-          if (titleNameElement) {
-            changeHeaderOn = titleNameElement.getBoundingClientRect().top;
-          }
-
-          const sy = window.pageYOffset || document.documentElement.scrollTop;
-          setIsShrunken(sy >= changeHeaderOn);
-          didScroll = false;
-        }, 50);
-      }
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -50px 0px', // Trigger when element is 50px from top
+      threshold: 0,
     };
 
-    window.addEventListener('scroll', handleScroll, false);
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        // Header should be shrunken when titleName is NOT intersecting (scrolled past)
+        setIsShrunken(!entry.isIntersecting);
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions,
+    );
+
+    // Observe the titleName element
+    const titleNameElement = document.getElementById('titleName');
+    if (titleNameElement) {
+      observer.observe(titleNameElement);
+    }
 
     return () => {
-      window.removeEventListener('scroll', handleScroll, false);
+      observer.disconnect();
     };
   }, []);
 

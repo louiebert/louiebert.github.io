@@ -39,9 +39,9 @@ This is a personal portfolio website for Louie Bertoncin, built as a static sing
 **Local Development:**
 
 - `npx tsc --noEmit` - TypeScript compile for a quick quality check before `npm run dev`
+- **Before running `npm run dev`**: Always check if port 3000 is in use with `netstat -an | findstr :3000`
+  - **Rule**: Do NOT run `npm run dev` if localhost:3000 is already in use (indicates existing dev server)
 - `npm run dev` - Start Vite development server on http://localhost:3000
-  - **Note**: Check if port 3000 is already in use before running to avoid duplicate instances
-  - Vite will automatically find the next available port if 3000 is occupied
 - Hot module replacement for instant updates during development
 - `npm run build` - Build optimized production files to `/dist` directory
 - `npm run preview` - Preview production build locally
