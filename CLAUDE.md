@@ -39,6 +39,8 @@ This is a personal portfolio website for Louie Bertoncin, built as a static sing
 **Local Development:**
 
 - `npm run dev` - Start Vite development server on http://localhost:3000
+  - **Note**: Check if port 3000 is already in use before running to avoid duplicate instances
+  - Vite will automatically find the next available port if 3000 is occupied
 - Hot module replacement for instant updates during development
 - `npm run build` - Build optimized production files to `/dist` directory
 - `npm run preview` - Preview production build locally
@@ -54,8 +56,8 @@ This is a personal portfolio website for Louie Bertoncin, built as a static sing
 
 **Frontend Framework:**
 
+- React 19.1.1 for component-based UI architecture
 - Tailwind CSS 4.x for utility-first styling and responsive design
-- jQuery 1.11.3 for DOM manipulation and smooth scrolling
 - Font Awesome 4.3.0 for social media icons
 
 **Development Tools:**
@@ -90,19 +92,20 @@ This is a personal portfolio website for Louie Bertoncin, built as a static sing
 - Mobile-first responsive design using Tailwind breakpoints
 - Optimized CSS with reduced redundancy (13% smaller after Bootstrap removal)
 
-**JavaScript:**
+**JavaScript/TypeScript:**
 
-- Vanilla JavaScript for animations and mobile menu toggle
-- jQuery for DOM manipulation and smooth scrolling
-- IIFE pattern for encapsulation in animations.ts
+- React components with TypeScript for type safety
+- React hooks (useEffect, useState) for animations and state management
+- Modern ES6+ syntax with Vite build optimizations
 
 ## Common Development Tasks
 
 **Content Updates:**
 
-- Edit sections directly in `index.html`
-- Update project cards in the Experience section
-- Modify social links in the Connect section
+- Edit React components in `src/components/` directory
+- Update project cards in `src/components/Experience.tsx`
+- Modify social links in `src/components/Connect.tsx`
+- Edit about text in `src/components/About.tsx`
 
 **Styling Changes:**
 
@@ -160,3 +163,42 @@ This project was successfully migrated from Bootstrap 3.3.7 to Tailwind CSS 4.x 
 - Preserved sophisticated custom animations
 - Modern responsive design patterns
 - Eliminated unused Bootstrap overhead
+
+**React Migration (Completed):**
+
+This project was successfully migrated from vanilla HTML/jQuery to React in 2025:
+
+**What was changed:**
+
+- `index.html` content → React components in `src/components/`
+- jQuery-based functionality → React hooks and state management
+- Static HTML structure → Dynamic React component architecture
+- `animations.ts` → React useEffect hooks for scroll animations
+
+**React Component Structure:**
+
+- `src/App.tsx` - Main React application component
+- `src/main.tsx` - TypeScript entry point for React
+- `src/components/Header.tsx` - Navigation with scroll animations
+- `src/components/Hero.tsx` - Main banner section
+- `src/components/About.tsx` - About section with profile picture
+- `src/components/Experience.tsx` - Experience cards with projects
+- `src/components/Education.tsx` - Education section with tech badges
+- `src/components/Connect.tsx` - Social media links
+
+**What was preserved:**
+
+- All existing CSS animations and hover effects
+- Visual appearance and responsive design
+- Smooth scrolling navigation behavior
+- Header scroll shrink animations
+- Mobile menu toggle functionality
+- All content and project information
+
+**Benefits achieved:**
+
+- Modern React component architecture
+- Better code organization and maintainability
+- Type safety with TypeScript
+- Hot module replacement for faster development
+- Component reusability and modularity
