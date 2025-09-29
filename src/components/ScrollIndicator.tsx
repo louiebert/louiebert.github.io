@@ -12,9 +12,9 @@ interface Section {
   label: string;
 }
 
-const ScrollIndicator: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<string>('');
+const OFFSET = 70; // Adjust this value based on your header height
 
+const ScrollIndicator: React.FC = () => {
   // Define the sections that correspond to your navigation
   const sections: Section[] = [
     { id: 'about', label: 'About' },
@@ -23,11 +23,13 @@ const ScrollIndicator: React.FC = () => {
     { id: 'connect', label: 'Connect' },
   ];
 
+  const [activeSection, setActiveSection] = useState<string>(sections[0].id);
+
   useEffect(() => {
     // Create intersection observer to detect which section is currently visible
     const observerOptions = {
       root: null,
-      rootMargin: '-20% 0px -50% 0px', // Trigger when section is 20% from top
+      rootMargin: `-${OFFSET}px 0px 0px 0px`, // Adjust for header height and trigger earlier
       threshold: 0,
     };
 
@@ -61,7 +63,7 @@ const ScrollIndicator: React.FC = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition; // Account for header height
+      const offsetPosition = elementPosition - OFFSET; // Account for header height
 
       window.scrollTo({
         top: offsetPosition,

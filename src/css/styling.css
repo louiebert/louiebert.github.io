@@ -21,77 +21,7 @@ section h1 {
 section p {
   @apply text-lg leading-relaxed;
 }
-section.about {
-  background: #4f6a82;
-  background: -webkit-linear-gradient(#4f6a82, #445d7f);
-  background: -o-linear-gradient(#4f6a82, #445d7f);
-  background: -moz-linear-gradient(#4f6a82, #445d7f);
-  background: linear-gradient(#4f6a82, #445d7f);
-}
-section.about #pic-container-lg,
-section.about #pic-container-sm {
-  position: relative;
-}
-section.about #pic-container-lg #profile-pic,
-section.about #pic-container-sm #profile-pic {
-  background-image: url('../images/profile-pic.jpg');
-  background-position: center;
-  background-repeat: none;
-  background-size: cover;
-}
-@media screen and (max-width: 767px) {
-  section.about #pic-container-lg #profile-pic,
-  section.about #pic-container-sm #profile-pic {
-    position: absolute;
-    top: 50%;
-    width: 150px;
-    height: 150px;
-    margin-left: -75px;
-    margin-top: -75px;
-    border-radius: 50%;
-    left: 50%;
-  }
-}
-@media screen and (min-width: 768px) {
-  section.about #pic-container-lg #profile-pic,
-  section.about #pic-container-sm #profile-pic {
-    position: absolute;
-    top: 50%;
-    width: 250px;
-    height: 250px;
-    margin-left: -125px;
-    margin-top: -125px;
-    border-radius: 50%;
-    left: 60%;
-  }
-}
-section.about #pic-container-sm {
-  min-height: 200px;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 767px) {
-  section.about {
-    text-align: center;
-  }
-  section.about #pic-container-lg {
-    display: none;
-  }
-  section.about #pic-container-sm {
-    display: block;
-  }
-}
-@media screen and (min-width: 768px) {
-  section.about {
-    text-align: left;
-  }
-  section.about #pic-container-lg {
-    display: block;
-  }
-  section.about #pic-container-sm {
-    display: none;
-    min-height: 0;
-  }
-}
+/* Responsive display, text alignment, and basic positioning now handled by Tailwind utilities */
 section.experience {
   background: #32455e;
   background: -webkit-linear-gradient(#32455e, #324352);
@@ -406,13 +336,13 @@ section.connect i.facebook {
   0% {
     opacity: 0;
     transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
   60% {
     opacity: 1;
     transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 
   100% {

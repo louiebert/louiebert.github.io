@@ -18,6 +18,10 @@ const config: Config = {
         'slate-custom': {
           800: '#131b2a', // Matches the value in main.css @theme
         },
+        'about-gradient': {
+          from: '#4f6a82', // Matches --color-about-gradient-from in main.css
+          to: '#445d7f',   // Matches --color-about-gradient-to in main.css
+        },
       },
     },
   },

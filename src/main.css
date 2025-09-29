@@ -11,6 +11,8 @@
 @theme {
   --font-family-raleway: Raleway, sans-serif;
   --color-slate-custom-800: #131b2a;
+  --color-about-gradient-from: #4f6a82;
+  --color-about-gradient-to: #445d7f;
 
   --animate-wiggle: wiggle 0.4s linear infinite;
   @keyframes wiggle {

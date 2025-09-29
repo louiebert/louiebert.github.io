@@ -52,37 +52,34 @@ const Connect: React.FC = () => {
   ];
 
   return (
-    <>
-      <div className="anchor" id="connect"></div>
-      <section className="section_title connect">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-wrap">
-            <h1>Connections to the Outside World</h1>
-          </div>
+    <section id="connect" className="connect">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex flex-wrap">
+          <h1>Connections to the Outside World</h1>
+        </div>
 
-          <div className="flex flex-wrap connect-sub">
-            <div className="w-8/12 mx-auto">
-              <h5>Feel free to creep on me on whatever source pleases you.</h5>
-            </div>
-          </div>
-
-          <hr />
-          {/* Social Profiles Links */}
-          <div className="sm:w-8/12 sm:mx-auto">
-            <ul className="flex justify-center space-x-4">
-              {socialLinks.map((link, index) => (
-                <SocialLink
-                  key={index}
-                  href={link.href}
-                  iconClass={link.iconClass}
-                  className={link.className}
-                />
-              ))}
-            </ul>
+        <div className="flex flex-wrap connect-sub">
+          <div className="w-8/12 mx-auto">
+            <h5>Feel free to creep on me on whatever source pleases you.</h5>
           </div>
         </div>
-      </section>
-    </>
+
+        <hr />
+        {/* Social Profiles Links */}
+        <div className="sm:w-8/12 sm:mx-auto">
+          <ul className="flex justify-center space-x-4">
+            {socialLinks.map((link, index) => (
+              <SocialLink
+                key={index}
+                href={link.href}
+                iconClass={link.iconClass}
+                className={link.className}
+              />
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 };
 

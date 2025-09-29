@@ -165,6 +165,13 @@ This project was successfully migrated from Bootstrap 3.3.7 to Tailwind CSS 4.x 
 - Modern responsive design patterns
 - Eliminated unused Bootstrap overhead
 
+**Ongoing Tailwind Refactoring:**
+
+- Section-by-section refactoring of remaining custom CSS to Tailwind utilities where appropriate
+- About section (September 2025): Successfully migrated background gradient, responsive display logic, text alignment, and basic positioning to Tailwind utilities
+- Preserved complex profile picture positioning logic in custom CSS due to intricate absolute positioning calculations
+- Custom gradient colors defined in `src/main.css` @theme directive (source of truth) with matching IDE support in `tailwind.config.ts`
+
 **React Migration (Completed):**
 
 This project was successfully migrated from vanilla HTML/jQuery to React in 2025:
