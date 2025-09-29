@@ -3,10 +3,9 @@ import React from 'react';
 const Hero: React.FC = () => {
   return (
     <div
-      className="h-screen flex items-center justify-center mb-0 bg-cover bg-center"
+      className="h-screen flex items-center tracking-wider justify-center mb-0 bg-cover bg-center"
       style={{
         backgroundImage: "url('images/billboard-lg.jpg')",
-        letterSpacing: '4px',
       }}
     >
       <h1
